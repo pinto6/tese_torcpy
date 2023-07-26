@@ -1058,7 +1058,7 @@ def stencilOperation(sub_data, radius, filter_func, originalShape, worker_chunk_
         torc_comm.Recv(recv_buffer_bottom, source=rank + 1,tag=worker_local_id())
         sub_data[-radius:, :] = recv_buffer_bottom
 
-
+    
     # Apply filter function to each index of sub_data
     result = np.zeros((sub_data.shape[0] - 2 * radius, sub_data.shape[1] - 2 * radius))
     start= radius + (worker_local_id()*worker_chunk_size)
@@ -1078,7 +1078,7 @@ def stencilOperation(sub_data, radius, filter_func, originalShape, worker_chunk_
     # Gather the results from all processes
     gathered_data = None
     if rank == 0:
-        gathered_data = np.zeros(originalShape)
+        gathered_data = np.zeros((size*sub_data.shape[0], sub_data.shape[1]))
     torc_comm.Gather(sub_data, gathered_data, root=0)
 
     return gathered_data
@@ -1097,7 +1097,7 @@ def stencil2D(data,radius,function):
 
     while(i<torc_num_workers):
         toRet= tasks[i].result()
-        if toRet != False:
+        if toRet.any():
             return toRet
         i= i + 1
 
@@ -1107,17 +1107,20 @@ def stencil2D(data,radius,function):
 def stencil2DSubmited(data,radius,originalShape,function):
     size = num_nodes()
     rank = node_id()
-
+    num_rows = (originalShape[0] + size -1) // size
     #HERE    
     # Scatter the data to all processes
     if rank == 0:
-        num_rows = (data.shape[0] + size -1) // size
         local_arr = torc_comm.scatter([data[i:i+num_rows, :] for i in range(0, size * num_rows, num_rows)], root=0)
     else:
         local_arr = torc_comm.scatter(data,root=0)
-        num_rows = local_arr.shape[0]
 
     worker_chunk_size = (num_rows + torc_num_workers - 1) // torc_num_workers
+
+    if local_arr.shape[0] != num_rows:
+        aux_arr = np.zeros((num_rows,originalShape[1]))
+        aux_arr[:local_arr.shape[0],:] = local_arr
+        local_arr = aux_arr
 
     #local_arr = local_arr[worker_local_id()*worker_chunk_size:(worker_local_id()+1)*worker_chunk_size,:]
 
@@ -1135,8 +1138,7 @@ def stencil2DSubmited(data,radius,originalShape,function):
     result = stencilOperation(sub_data, radius=radius, filter_func=function, originalShape=originalShape, worker_chunk_size=worker_chunk_size)
 
     if rank == 0:
-        print("Result:")
-        print(result)
+        result = result[:originalShape[0],:]
         return result
     
 

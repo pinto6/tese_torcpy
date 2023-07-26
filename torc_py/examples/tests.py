@@ -101,11 +101,11 @@ def stencil():
                      [9, 10, 11, 12],
                      [13, 14, 15, 16]])
     radius = 1
-    print("HERE")
     ts = time.time()
-    torc.stencil2D(data,radius,function=filter_function)
+    toRet = torc.stencil2D(data,radius,function=filter_function)
     ts = time.time() - ts
-    print("HERE1",ts)
+    print("to return", toRet)
+    print("TIME",ts)
 
 
 
