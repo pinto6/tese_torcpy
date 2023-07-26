@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+torcpy/__init__.py
+torcpy/runtime.py
+torcpy.egg-info/PKG-INFO
+torcpy.egg-info/SOURCES.txt
+torcpy.egg-info/dependency_links.txt
+torcpy.egg-info/not-zip-safe
+torcpy.egg-info/requires.txt
+torcpy.egg-info/top_level.txt

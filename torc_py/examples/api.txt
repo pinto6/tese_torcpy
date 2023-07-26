@@ -1,0 +1,18 @@
+search(arr, checkFunction, transformFunc):
+    args:
+        arr -> is an array.
+        transformFunc -> receives a value and transform it using a complex function. this function is optional. Returns a transformed value.
+        checkFunction -> is the function to check if a value is the correct one, returns boolean.
+    Returns a tuple with:
+        -flag found
+        -the global index where it was found
+        -the value that it was after the transformation
+
+stencil2D(data,radius,filterFunction):
+    args:
+        data -> is an array of 2 dimensions.
+        radius -> is the size of the radius of the filter (filter has always the same size in rows and in collumns).
+        filterFunction -> is a function that receives a sub_array with the same shape as the filter. It uses the filter on that subArray and returns a single processed value.
+    Returns the modified array
+
+stencil1D is similar to stencil2D.

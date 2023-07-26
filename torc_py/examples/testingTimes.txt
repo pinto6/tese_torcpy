@@ -1,0 +1,123 @@
+serial version:
+    index 966 with 0.1 timesleep: 97.55863976478577
+mpi version 1 process:
+    index 966 with 0.1 timesleep: 97.5749762058258
+torc_py version 1 process:
+    index 966 with 0.1 timesleep: 97.71062779426575
+
+
+mpi version 2 process:
+    index 966 with 0.1 timesleep: 17.036737203598022
+torc_py version 2 process:
+    index 966 with 0.1 timesleep: 16.93556046485901
+
+
+mpi version 3 process:
+    index 966 with 0.1 timesleep: 43.85245180130005
+torc_py version 3 process:
+    index 966 with 0.1 timesleep: 43.771103858947754
+
+
+mpi version 4 process:
+    index 966 with 0.1 timesleep: 17.134195804595947
+torc_py version 4 process:
+    index 966 with 0.1 timesleep: 16.93788743019104
+
+
+
+
+--------------------------------------------
+
+1 mpi 1 worker: 179.2707600593567
+1 mpi 2 workers: 99.42391753196716
+1 mpi 4 workers: 43.89147067070007
+1 mpi 8 workers: 20.525015592575073
+1 mpi 16 workers: 11.880038738250732
+1 mpi 32 workers: 5.69603419303894
+1 mpi 64 workers: 3.0575902462005615
+1 mpi 128 workers: 1.339383840560913
+1 mpi 256 workers: 0.7276816368103027
+
+---
+
+2 mpi 1 worker: 81.32274150848389
+2 mpi 2 workers: 40.514906883239746
+2 mpi 4 workers: 20.263344049453735
+2 mpi 8 workers: 10.188344955444336
+2 mpi 16 workers: 5.13805890083313
+2 mpi 32 workers: 2.758741617202759
+2 mpi 64 workers: 1.4141995906829834
+2 mpi 128 workers: 3.4802041053771973
+2 mpi 256 workers: 9.985180854797363
+
+---
+
+4 mpi 1 worker: 40.33949565887451
+4 mpi 2 workers: 20.204819440841675
+4 mpi 4 workers: 10.159466743469238
+4 mpi 8 workers: 5.190280914306641
+4 mpi 16 workers: 2.7522757053375244
+4 mpi 32 workers: 1.6303012371063232
+4 mpi 64 workers: 1.310605764389038
+4 mpi 128 workers: 1.7748818397521973
+4 mpi 256 workers: 9.27571415901184
+
+---OVERSUBSCRIBE-- valores de index estranhos. Não usar oversubscribe
+
+
+8 mpi 1 worker: 20.287685871124268
+8 mpi 2 workers: 10.297083377838135
+8 mpi 4 workers: 5.290379285812378
+8 mpi 8 workers: 2.8564682006835938
+8 mpi 16 workers: 1.9816439151763916
+8 mpi 32 workers: 2.3983747959136963
+8 mpi 64 workers: 4.987700939178467
+8 mpi 128 workers: 6.298285245895386
+8 mpi 256 workers: 29.908132553100586
+
+16 mpi 1 worker: 10.21355652809143
+16 mpi 2 workers: 5.302228212356567
+16 mpi 4 workers: 2.940643072128296
+16 mpi 8 workers: 1.9665758609771729
+16 mpi 16 workers: 1.7138502597808838
+16 mpi 32 workers: 1.722766637802124
+16 mpi 64 workers: 25.569048404693604
+
+
+
+--------------------------------------------
+WITHOUT TIME SLEEP
+
+1 mpi 1 worker: 160.0981159210205
+1 mpi 2 workers: 83.41939783096313
+1 mpi 4 workers: 45.9506139755249
+1 mpi 8 workers: 29.662522554397583
+1 mpi 16 workers: 23.31544852256775
+1 mpi 32 workers: 21.437386989593506
+1 mpi 64 workers: 18.992372512817383
+1 mpi 128 workers: 16.42807912826538
+1 mpi 256 workers: 16.967937231063843
+
+---
+
+2 mpi 1 worker: 80.07388210296631
+2 mpi 2 workers: 43.029311418533325
+2 mpi 4 workers: 23.53737711906433
+2 mpi 8 workers: 14.967933416366577
+2 mpi 16 workers: 12.363282918930054
+2 mpi 32 workers: 11.001551389694214
+2 mpi 64 workers: 11.469350576400757
+2 mpi 128 workers: 13.350192785263062
+2 mpi 256 workers: 15.88219141960144
+
+---
+
+4 mpi 1 worker: 40.078131437301636
+4 mpi 2 workers: 21.590809106826782
+4 mpi 4 workers: 12.545477151870728
+4 mpi 8 workers: 9.005561351776123
+4 mpi 16 workers: 8.470251083374023
+4 mpi 32 workers: 11.670198917388916
+4 mpi 64 workers: 13.345986604690552
+4 mpi 128 workers: 17.27037477493286
+4 mpi 256 workers: 28.58127474784851

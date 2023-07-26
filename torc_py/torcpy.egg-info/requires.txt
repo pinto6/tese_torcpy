@@ -1,0 +1,7 @@
+cma
+coloredlogs
+mpi4py
+numpy
+pillow
+pytest
+termcolor
