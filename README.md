@@ -1,4 +1,4 @@
-# Search Test
+# Search Test Worst Case
 ## with time.sleep
 1 mpi 1 worker: 179.2707600593567
 
