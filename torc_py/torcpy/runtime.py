@@ -1095,13 +1095,17 @@ def stencil2D(data,radius,function):
     waitall(tasks)
     i = 0
 
+    toRet = np.zeros(data.shape)
     while(i<torc_num_workers):
-        toRet= tasks[i].result()
-        if toRet.any():
-            return toRet
+        aux= tasks[i].result()
+        j = aux[0]
+        aux = aux[1]
+        while j < data.shape[0]:
+            toRet[j,:] = aux[j,:]
+            j = j + torc_num_workers
         i= i + 1
 
-    return tasks[0].result()
+    return toRet
 
 
 def stencil2DSubmited(data,radius,originalShape,function):
@@ -1138,7 +1142,7 @@ def stencil2DSubmited(data,radius,originalShape,function):
     result = stencilOperation(sub_data, radius=radius, filter_func=function, originalShape=originalShape, worker_chunk_size=worker_chunk_size)
 
     if rank == 0:
-        result = result[:originalShape[0],:]
+        result = (worker_local_id(),result[:originalShape[0],:])
         return result
     
 
