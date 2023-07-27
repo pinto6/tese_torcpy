@@ -86,7 +86,7 @@ def searchTest():
     return toRet
 
 def filter_function(sub_array):
-    filter = np.array([[1, 1, 1], [1, 1, 1], [1, 1, 1]])
+    filter = np.array([[1, 0, -1], [0, 0, 0], [-1, 0, 1]])
     result = None
     radius = filter.shape[0] // 2
     for i in range(radius, sub_array.shape[0] - radius):
@@ -95,15 +95,27 @@ def filter_function(sub_array):
             result = np.sum(window * filter)
     return result
 
+from PIL import Image
+from numpy import asarray
+ 
 def stencil():
     data = np.array([[1, 2, 3, 4],
                      [5, 6, 7, 8],
                      [9, 10, 11, 12],
                      [13, 14, 15, 16]])
+
+    img = Image.open('Sample.png')
+    img = img.convert("L")
+    data = np.array(img)
+    print(data.shape)
+
     radius = 1
     ts = time.time()
     toRet = torc.stencil2D(data,radius,function=filter_function)
     ts = time.time() - ts
+
+    pilImage = Image.fromarray(toRet.astype(np.uint8))
+    pilImage.save("processed.png")
     print("to return", toRet)
     print("TIME",ts)
 
