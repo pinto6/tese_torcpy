@@ -912,9 +912,9 @@ def search(arr, checkFunction, transformFunc):
     tasks = []
     while(i<num_workers()):
         if i < torc_num_workers:
-            tasks += [submit(searchSubmitted,arr,len(arr), checkFunction, transformFunc)]
+            tasks += [submit(searchSubmitted,arr,len(arr), checkFunction, i,transformFunc)]
         else:
-            tasks += [submit(searchSubmitted,None,len(arr), checkFunction, transformFunc)]
+            tasks += [submit(searchSubmitted,None,len(arr), checkFunction, i%torc_num_workers, transformFunc)]
         i= i + 1
     waitall(tasks)
     i = 0
@@ -926,39 +926,26 @@ def search(arr, checkFunction, transformFunc):
         i= i + 1
     return False
 
-def broadcast(value):
+def broadcast(value, tagId):
     size = num_nodes()
     rank = node_id()
     if rank != 0:
         return
     i= 1
     while i< size:
-        torc_comm.Isend(value,dest = i)
+        torc_comm.Isend(value,dest = i,tag=tagId)
         i += 1
 
-def broadcast2(arr,chunk_size):
-    size = num_nodes()
-
-    worker_chunk_size = (chunk_size + torc_num_workers - 1) // torc_num_workers
-    i= 0
-    while i< size:
-        localArr = arr[i*chunk_size:(i+1)*chunk_size]
-        #print("broadcast local array",localArr,"in i",i)
-        workerId = 0
-        while workerId < torc_num_workers:
-            if i != 0 or workerId != 0:
-                #print("it's going to send",localArr[workerId*worker_chunk_size:(workerId+1)*worker_chunk_size],i, "to worker",workerId)
-                toSendArr = localArr[workerId*worker_chunk_size:(workerId+1)*worker_chunk_size]
-                print("is going to send",toSendArr)
-                torc_comm.Isend(bytearray(toSendArr),dest = i,tag=workerId)
-                #print("sent to", i, "in worker",workerId)
-            workerId += 1
+def broadcastToOtherWorkers(found_signal,tagId):
+    i = 0
+    while i< torc_num_workers:
+        if i != tagId:
+            torc_comm.Isend(found_signal,dest = 0,tag=i)
         i += 1
-    print("returning")
-    return arr[0:worker_chunk_size]
 
 
-def searchSubmitted(arr, length, checkFunction, transformFunc=lambda a: a):
+
+def searchSubmitted(arr, length, checkFunction, localWorkerId ,transformFunc=lambda a: a):
     size = num_nodes()
     rank = node_id()
 
@@ -997,11 +984,11 @@ def searchSubmitted(arr, length, checkFunction, transformFunc=lambda a: a):
         #print("state ->",state, ", i ->", i,", rank ->", rank, found)        
         if state == 0:
             # Check if any process has broadcasted the signal
-            if torc_comm.Iprobe(source=MPI.ANY_SOURCE, tag=1):
-                torc_comm.Recv(found_signal, source=MPI.ANY_SOURCE, tag=1)
+            if torc_comm.Iprobe(source=MPI.ANY_SOURCE,tag=localWorkerId):
+                torc_comm.Recv(found_signal, source=MPI.ANY_SOURCE,tag=localWorkerId)
             if found or found_signal[0] == 1:
                 # Value was found, broadcast to stop work
-                broadcast(found_signal)
+                broadcast(found_signal,localWorkerId)
                 break
             state = 1
         elif state == 1:
@@ -1014,9 +1001,9 @@ def searchSubmitted(arr, length, checkFunction, transformFunc=lambda a: a):
 
                         # Broadcast the found signal to other processes
                         found_signal[0] = 1
+                        broadcastToOtherWorkers(found_signal,localWorkerId)
                         if rank != 0:
-                            torc_comm.Isend(found_signal,dest = 0, tag=1)
-                            #print("SENT to rank 0")
+                            torc_comm.Isend(found_signal,dest = 0, tag=localWorkerId)
                         #comm.Bcast(found_signal, root=rank)
                 i += 1
                 state = 0
