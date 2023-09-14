@@ -933,14 +933,14 @@ def broadcast(value, tagId):
         return
     i= 1
     while i< size:
-        torc_comm.Isend(value,dest = i,tag=tagId)
+        torc_comm.Isend(value,dest = i,tag=101+tagId)
         i += 1
 
 def broadcastToOtherWorkers(found_signal,tagId):
     i = 0
     while i< torc_num_workers:
         if i != tagId:
-            torc_comm.Isend(found_signal,dest = 0,tag=i)
+            torc_comm.Isend(found_signal,dest = 0,tag=101+i)
         i += 1
 
 
@@ -964,7 +964,7 @@ def searchSubmitted(arr, length, checkFunction, localWorkerId ,transformFunc=lam
 
     worker_chunk_size = (len(local_arr) + torc_num_workers - 1) // torc_num_workers
 
-    local_arr = local_arr[worker_local_id()*worker_chunk_size:(worker_local_id()+1)*worker_chunk_size]
+    local_arr = local_arr[localWorkerId*worker_chunk_size:(localWorkerId+1)*worker_chunk_size]
 
     #print("local_arr is",local_arr,"with worker",worker_id())
 
@@ -984,8 +984,8 @@ def searchSubmitted(arr, length, checkFunction, localWorkerId ,transformFunc=lam
         #print("state ->",state, ", i ->", i,", rank ->", rank, found)        
         if state == 0:
             # Check if any process has broadcasted the signal
-            if torc_comm.Iprobe(source=MPI.ANY_SOURCE,tag=localWorkerId):
-                torc_comm.Recv(found_signal, source=MPI.ANY_SOURCE,tag=localWorkerId)
+            if torc_comm.Iprobe(source=MPI.ANY_SOURCE,tag=101+localWorkerId):
+                torc_comm.Recv(found_signal, source=MPI.ANY_SOURCE,tag=101+localWorkerId)
             if found or found_signal[0] == 1:
                 # Value was found, broadcast to stop work
                 broadcast(found_signal,localWorkerId)
@@ -997,13 +997,13 @@ def searchSubmitted(arr, length, checkFunction, localWorkerId ,transformFunc=lam
                 if checkFunction(transformedValue):
                         found = True
                         originalValue = local_arr[i]
-                        index = i + start + (worker_id()*worker_chunk_size)
+                        index = i + start + (localWorkerId*worker_chunk_size)
 
                         # Broadcast the found signal to other processes
                         found_signal[0] = 1
                         broadcastToOtherWorkers(found_signal,localWorkerId)
                         if rank != 0:
-                            torc_comm.Isend(found_signal,dest = 0, tag=localWorkerId)
+                            torc_comm.Isend(found_signal,dest = 0, tag=101+localWorkerId)
                         #comm.Bcast(found_signal, root=rank)
                 i += 1
                 state = 0
