@@ -84,6 +84,10 @@ def searchTest():
     arr = arr + arr
     arr = arr + arr + arr + arr + arr
     arr = arr + arr
+    arr = arr + arr + arr + arr + arr
+    arr = arr + arr
+    arr = arr + arr + arr + arr + arr
+    arr = arr + arr
     arr[-1] = 2
     print(len(arr))
 
