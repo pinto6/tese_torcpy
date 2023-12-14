@@ -1,10 +1,12 @@
+#!/usr/bin/env python3
+
 import torcpy as torc
 import numpy as np
 import time
 
 def fun(value):
     #time.sleep(0.1)
-    return value == 20
+    #return value == 20
     start_time = time.time()  # Record the starting time
     total_sum = 0
     for i in range(1, 1000000):
@@ -12,7 +14,7 @@ def fun(value):
 
         # Check if 100 milliseconds have elapsed
         elapsed_time = time.time() - start_time
-        if elapsed_time >= 0.1:
+        if elapsed_time >= 0.01:
             break
 
     return value == 20

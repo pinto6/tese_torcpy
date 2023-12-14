@@ -1,3 +1,9 @@
+# Command
+mpirun --hostfile $OAR_NODEFILE -n 16 --mca btl_tcp_if_include bond0 tests.py
+
+no .ssh/config:
+StrictHostKeyChecking no
+
 # Search Test Worst Case
 ## Without time.sleep 160 million indexes - 1 bulbasaur
 
