@@ -1,0 +1,42 @@
+Thread Count: 8
+index array is 90000000
+160000000
+Value found at index: 90000000 with original value 2 and transformed value 20
+ended execution with time 115.9204592704773
+----------------------------------------
+Thread Count: 16
+index array is 85000000
+160000000
+Value found at index: 85000000 with original value 2 and transformed value 20
+ended execution with time 59.471027135849
+----------------------------------------
+Thread Count: 32
+index array is 82500000
+160000000
+Value found at index: 82500000 with original value 2 and transformed value 20
+ended execution with time 35.100136280059814
+----------------------------------------
+Thread Count: 33
+index array is 82424228
+160000000
+Value found at index: 82424228 with original value 2 and transformed value 20
+ended execution with time 64.34473609924316
+----------------------------------------
+Thread Count: 64
+index array is 81250000
+160000000
+Value found at index: 81250000 with original value 2 and transformed value 20
+ended execution with time 21.143495798110962
+----------------------------------------
+Thread Count: 65
+index array is 81230754
+160000000
+Value found at index: 81230754 with original value 2 and transformed value 20
+ended execution with time 37.91999292373657
+----------------------------------------
+Thread Count: 96
+index array is 80833301
+160000000
+Value found at index: 80833301 with original value 2 and transformed value 20
+ended execution with time 15.54587435722351
+----------------------------------------

@@ -1,0 +1,10 @@
+Thread Count: 1
+160000000
+Value found at index: 159999999 with original value 2 and transformed value 20
+ended execution with time 1815.2579941749573
+----------------------------------------
+Thread Count: 2
+160000000
+Value found at index: 159999999 with original value 2 and transformed value 20
+ended execution with time 908.7422223091125
+----------------------------------------

@@ -14,7 +14,7 @@ def fun(value):
 
         # Check if 100 milliseconds have elapsed
         elapsed_time = time.time() - start_time
-        if elapsed_time >= 0.01:
+        if elapsed_time >= 0.00001:
             break
 
     return value == 20
@@ -66,8 +66,6 @@ def search_array_parallel(arr, length, checkFunction, transformFunc=lambda a: a)
 
 
     while True:
-        if( i%1000 == 0 and rank == 31):
-            print("state ->",state, ", i ->", i,", rank ->", rank, found)        
         if state == 0:
             # Check if any process has broadcasted the signal
             if comm.Iprobe(source=MPI.ANY_SOURCE):
@@ -129,7 +127,16 @@ if __name__ == "__main__":
     arr = arr + arr
     arr = arr + arr + arr + arr + arr
     arr = arr + arr
-    arr[-1] = 2
+
+    from mpi4py import MPI
+    numNodes = MPI.COMM_WORLD.Get_size()
+    index = int(len(arr)/2)
+    subArrayLen = int(len(arr)/numNodes)
+    index = int(subArrayLen * (numNodes/2) + (subArrayLen/2))
+    if numNodes == 1:
+        index = 80000000
+    arr[index] = 2
+    #arr[-1] = 2
 
     #arr = [4, 2, 7, 1, 9, 5, 8]
     comm = MPI.COMM_WORLD
@@ -137,6 +144,7 @@ if __name__ == "__main__":
     rank = comm.Get_rank()
 
     if rank == 0:
+        print("index array is", index)
         print(len(arr))
         ts = time.time()
         search_array_parallel(arr, len(arr), checkFunction=fun, transformFunc = transform)

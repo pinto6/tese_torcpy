@@ -1,0 +1,4 @@
+set arg1=%1
+shift
+scp "%arg:x
+1%" dicluster:torcpy2/examples
