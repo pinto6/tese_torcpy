@@ -6,6 +6,7 @@ path = './charmander'
 
 # get a list of all text files in the specified directory
 files = [f for f in os.listdir(path) if f.endswith('.txt')]
+print("files are:", files)
 
 # iterate over each file
 for file in files:
