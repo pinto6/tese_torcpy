@@ -5,7 +5,7 @@ echo $OAR_NODEFILE
 cat /var/lib/oar/27711	(JOBID)
 
 
-oarsub -I -p "host in ('charmander-3','charmander-4')" -l /nodes=2
+oarsub -I -p "host in ('charmander-3','charmander-4','charmander-5')" -l /nodes=3
 oarsub -I -p "host in ('charmander-3','charmander-4','bulbasaur-1','bulbasaur-2','bulbasaur-3')" -l /nodes=5
 
 oarsub -C $JOBID
@@ -14,3 +14,6 @@ oarwalltime $JOBID +1:30
 
 
 mpirun --hostfile $OAR_NODEFILE -n 16 --mca btl_tcp_if_include bond0 tests.py
+
+
+./benchmark.sh 100milLeftSumStencilNoTorcCharmanderV1.txt

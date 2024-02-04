@@ -4,6 +4,12 @@ import torcpy as torc
 import numpy as np
 import time
 
+def create_2d_array(rows, cols):
+    # Create an array of arrays filled with 1
+    result_array = np.ones((rows, cols), dtype=int)
+
+    return result_array
+
 def fun(value):
     #time.sleep(0.1)
     #return value == 20
@@ -112,27 +118,30 @@ def searchTest():
     return toRet
 
 def filter_function(sub_array):
-    filter = np.array([[1, 0, -1], [0, 0, 0], [-1, 0, 1]])
+    #filter = np.array([[1, 0, -1], [0, 0, 0], [-1, 0, 1]])
+    filter = np.array([[0, 0, 0], [1, 1, 0], [0, 0, 0]])
     result = None
     radius = filter.shape[0] // 2
-    for i in range(radius, sub_array.shape[0] - radius):
-        for j in range(radius, sub_array.shape[1] - radius):
-            window = sub_array[i - radius : i + radius + 1, j - radius : j + radius + 1]
-            result = np.sum(window * filter)
+    #for i in range(radius, sub_array.shape[0] - radius):
+    #    for j in range(radius, sub_array.shape[1] - radius):
+    #        window = sub_array[i - radius : i + radius + 1, j - radius : j + radius + 1]
+    #        result = np.sum(window * filter)
+    result = np.sum(sub_array * filter)
     return result
 
 from PIL import Image
 from numpy import asarray
  
 def stencil():
-    data = np.array([[1, 2, 3, 4],
-                     [5, 6, 7, 8],
-                     [9, 10, 11, 12],
-                     [13, 14, 15, 16]])
+    #data = np.array([[1, 2, 3, 4],
+    #                 [5, 6, 7, 8],
+    #                 [9, 10, 11, 12],
+    #                 [13, 14, 15, 16]])
 
-    img = Image.open('Sample.png')
-    img = img.convert("L")
-    data = np.array(img)
+    #img = Image.open('Sample.png')
+    #img = img.convert("L")
+    #data = np.array(img)
+    data = create_2d_array(10000,10000)
     print(data.shape)
 
     radius = 1
@@ -140,8 +149,8 @@ def stencil():
     toRet = torc.stencil2D(data,radius,function=filter_function)
     ts = time.time() - ts
 
-    pilImage = Image.fromarray(toRet.astype(np.uint8))
-    pilImage.save("processed.png")
+    #pilImage = Image.fromarray(toRet.astype(np.uint8))
+    #pilImage.save("processed.png")
     print("to return", toRet)
     print("TIME",ts)
 
