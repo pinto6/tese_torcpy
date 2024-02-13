@@ -1,0 +1,171 @@
+Tue Feb 13 16:01:23 2024    ./cprof/search/output0.pstats
+
+         325631095 function calls (325631079 primitive calls) in 158.565 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000  158.565  158.565 {built-in method builtins.exec}
+        1    0.000    0.000  158.565  158.565 <string>:1(<module>)
+        1    0.000    0.000  158.565  158.565 /home/mmr.pinto/search.py:73(torcStart)
+        1    0.000    0.000  158.565  158.565 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:753(start)
+        1    0.422    0.422  158.534  158.534 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:706(launch)
+        1    2.314    2.314  158.112  158.112 /home/mmr.pinto/search.py:28(searchTest)
+        1    0.000    0.000  155.798  155.798 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:910(search)
+        1    0.000    0.000  155.310  155.310 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:378(waitall)
+        1    0.027    0.027  155.279  155.279 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:276(_do_work)
+        1   15.534   15.534  155.252  155.252 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:948(searchSubmitted)
+ 10000000   69.181    0.000  106.346    0.000 /home/mmr.pinto/search.py:9(fun)
+285629736   37.165    0.000   37.165    0.000 {built-in method time.time}
+ 10000001   13.723    0.000   13.723    0.000 {method 'Iprobe' of 'mpi4py.MPI.Comm' objects}
+        1   13.074   13.074   13.074   13.074 {method 'gather' of 'mpi4py.MPI.Comm' objects}
+        1    2.323    2.323    2.323    2.323 {method 'scatter' of 'mpi4py.MPI.Comm' objects}
+ 10000000    2.297    0.000    2.297    0.000 /home/mmr.pinto/search.py:24(transform)
+ 10000069    1.347    0.000    1.347    0.000 {built-in method builtins.len}
+        1    0.609    0.609    0.609    0.609 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:957(<listcomp>)
+       16    0.000    0.000    0.488    0.031 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:157(submit)
+       31    0.488    0.016    0.488    0.016 {method 'send' of 'mpi4py.MPI.Comm' objects}
+       15    0.000    0.000    0.487    0.032 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:130(_send_desc_and_data)
+        4    0.000    0.000    0.031    0.008 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:344(dequeue)
+        4    0.030    0.008    0.030    0.008 {built-in method time.sleep}
+        1    0.000    0.000    0.030    0.030 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:670(finalize)
+        3    0.020    0.007    0.020    0.007 {method 'barrier' of 'mpi4py.MPI.Comm' objects}
+       61    0.010    0.000    0.010    0.000 {method 'acquire' of '_thread.lock' objects}
+        1    0.000    0.000    0.010    0.010 /usr/lib/python3.9/threading.py:1001(join)
+        1    0.000    0.000    0.010    0.010 /usr/lib/python3.9/threading.py:1039(_wait_for_tstate_lock)
+        1    0.000    0.000    0.001    0.001 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:595(init)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:1444(warning)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:1561(_log)
+        2    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/termcolor/termcolor.py:174(cprint)
+       34    0.000    0.000    0.000    0.000 /usr/lib/python3.9/queue.py:154(get)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:1587(handle)
+        6    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:1641(callHandlers)
+        1    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:660(_print_stats)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:935(handle)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:1067(emit)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:855(start)
+        1    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:648(_terminate_nodes)
+        2    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/termcolor/termcolor.py:129(colored)
+        2    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/termcolor/termcolor.py:100(_can_do_colour)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:912(format)
+        2    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/coloredlogs/__init__.py:1095(format)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:556(wait)
+       65    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:125(num_workers)
+       12    0.000    0.000    0.000    0.000 /usr/lib/python3.9/os.py:674(__getitem__)
+        2    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/humanfriendly/terminal/__init__.py:277(ansi_wrap)
+        1    0.000    0.000    0.000    0.000 {built-in method _thread.start_new_thread}
+        1    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:338(enqueue)
+        2    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/humanfriendly/terminal/__init__.py:166(ansi_style)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:1546(makeRecord)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:280(wait)
+        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1033(_handle_fromlist)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:278(__init__)
+       33    0.000    0.000    0.000    0.000 /usr/lib/python3.9/copy.py:66(copy)
+        6    0.000    0.000    0.000    0.000 /usr/lib/python3.9/_collections_abc.py:766(__contains__)
+       72    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:105(num_nodes)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/queue.py:122(put)
+       36    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:256(__enter__)
+       27    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+        6    0.000    0.000    0.000    0.000 /usr/lib/python3.9/_collections_abc.py:759(get)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:777(__init__)
+        4    0.000    0.000    0.000    0.000 /usr/lib/python3.9/abc.py:96(__instancecheck__)
+       38    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:100(node_id)
+        4    0.000    0.000    0.000    0.000 {built-in method _abc._abc_instancecheck}
+     10/2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/abc.py:100(__subclasscheck__)
+       34    0.000    0.000    0.000    0.000 /usr/lib/python3.9/queue.py:209(_qsize)
+     10/2    0.000    0.000    0.000    0.000 {built-in method _abc._abc_subclasscheck}
+       36    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:259(__exit__)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:646(format)
+       12    0.000    0.000    0.000    0.000 /usr/lib/python3.9/os.py:754(encode)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:351(notify)
+        4    0.000    0.000    0.000    0.000 /usr/lib/python3.9/os.py:771(getenv)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:966(_stop)
+        2    0.000    0.000    0.000    0.000 {method 'write' of '_io.TextIOWrapper' objects}
+       16    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:147(__del__)
+       72    0.000    0.000    0.000    0.000 {method 'Get_size' of 'mpi4py.MPI.Comm' objects}
+       36    0.000    0.000    0.000    0.000 {method '__enter__' of '_thread.lock' objects}
+        2    0.000    0.000    0.000    0.000 {method 'isatty' of '_io.TextIOWrapper' objects}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:1510(findCaller)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/ctypes/__init__.py:509(cast)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:1685(isEnabledFor)
+       16    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:135(__init__)
+       67    0.000    0.000    0.000    0.000 {built-in method time.monotonic}
+       39    0.000    0.000    0.000    0.000 {method 'Get_rank' of 'mpi4py.MPI.Comm' objects}
+       49    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
+       33    0.000    0.000    0.000    0.000 {built-in method builtins.id}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:521(__init__)
+       56    0.000    0.000    0.000    0.000 {method 'release' of '_thread.lock' objects}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/posixpath.py:140(basename)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:1056(flush)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/posixpath.py:117(splitext)
+        9    0.000    0.000    0.000    0.000 {built-in method builtins.hasattr}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/os.py:758(decode)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:630(formatMessage)
+        4    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:1318(current_thread)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:624(usesTime)
+        2    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/coloredlogs/__init__.py:1516(get)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/queue.py:213(_put)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:228(__init__)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:428(format)
+        3    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:271(_is_owned)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/queue.py:217(_get)
+       16    0.000    0.000    0.000    0.000 {method 'copy' of 'dict' objects}
+       38    0.000    0.000    0.000    0.000 {method '__exit__' of '_thread.lock' objects}
+       12    0.000    0.000    0.000    0.000 {method 'encode' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/coloredlogs/__init__.py:1477(normalize_name)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:425(_format)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:417(usesTime)
+        4    0.000    0.000    0.000    0.000 {method 'flush' of '_io.TextIOWrapper' objects}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/genericpath.py:121(_splitext)
+        2    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/_weakrefset.py:82(add)
+        4    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:892(acquire)
+       17    0.000    0.000    0.000    0.000 /usr/lib/python3.9/copy.py:107(_copy_immutable)
+        2    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:156(<lambda>)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:119(getLevelName)
+        2    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/humanfriendly/compat.py:101(coerce_string)
+        2    0.000    0.000    0.000    0.000 {built-in method posix.getpid}
+       16    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:115(num_local_workers)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:214(_acquireLock)
+        4    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:899(release)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:1189(_make_invoke_excepthook)
+        6    0.000    0.000    0.000    0.000 {method 'rfind' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/posixpath.py:41(_get_sep)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:268(_acquire_restore)
+        4    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:787(filter)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/posixpath.py:52(normcase)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:750(_newname)
+        2    0.000    0.000    0.000    0.000 {method 'update' of 'dict' objects}
+        5    0.000    0.000    0.000    0.000 {method 'acquire' of '_thread.RLock' objects}
+        2    0.000    0.000    0.000    0.000 {method 'lower' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 {method 'decode' of 'bytes' objects}
+        2    0.000    0.000    0.000    0.000 {method 'find' of 'str' objects}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:1053(name)
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:1107(daemon)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:265(_release_save)
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:223(_releaseLock)
+        6    0.000    0.000    0.000    0.000 {built-in method _thread.get_ident}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:354(getMessage)
+        2    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/humanfriendly/terminal/__init__.py:225(<listcomp>)
+        2    0.000    0.000    0.000    0.000 {method 'append' of 'collections.deque' objects}
+        2    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/humanfriendly/compat.py:111(is_string)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 {method 'discard' of 'set' objects}
+        1    0.000    0.000    0.000    0.000 {method 'popleft' of 'collections.deque' objects}
+        1    0.000    0.000    0.000    0.000 {mpi4py.MPI.Query_thread}
+        2    0.000    0.000    0.000    0.000 {built-in method sys._getframe}
+        6    0.000    0.000    0.000    0.000 {built-in method posix.fspath}
+        5    0.000    0.000    0.000    0.000 {method 'release' of '_thread.RLock' objects}
+        2    0.000    0.000    0.000    0.000 /usr/lib/python3.9/threading.py:529(is_set)
+        1    0.000    0.000    0.000    0.000 {method 'add' of 'set' objects}
+        2    0.000    0.000    0.000    0.000 {built-in method _thread.allocate_lock}
+        3    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:1272(disable)
+        1    0.000    0.000    0.000    0.000 /home/mmr.pinto/.local/lib/python3.9/site-packages/torcpy/runtime.py:144(result)
+        2    0.000    0.000    0.000    0.000 {method 'items' of 'dict' objects}
+        1    0.000    0.000    0.000    0.000 /usr/lib/python3.9/logging/__init__.py:1671(getEffectiveLevel)
+        1    0.000    0.000    0.000    0.000 {method 'locked' of '_thread.lock' objects}
+
+

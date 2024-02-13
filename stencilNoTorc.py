@@ -3,6 +3,7 @@
 from mpi4py import MPI
 import numpy as np
 import time
+import cProfile
 
 
 comm = MPI.COMM_WORLD
@@ -108,10 +109,28 @@ def create_2d_array(rows, cols):
 
 
 # Test the function
-if __name__ == "__main__":
+#if __name__ == "__main__":
+#    data = create_2d_array(10000,10000)
+
+#    radius = 1
+#    rank = comm.Get_rank()
+
+#    ts = 0
+#    if rank == 0:
+#        ts = time.time()
+#        toRet = stencil2DSubmited(data,radius,data.shape,function=filter_function)
+#        ts = time.time() - ts
+#        print("ended execution","with time",ts)
+#        print("to return", toRet)
+#    else:
+#        toRet = stencil2DSubmited(None,radius,data.shape,function=filter_function)
+    
+
+def main():
     data = create_2d_array(10000,10000)
 
     radius = 1
+    comm = MPI.COMM_WORLD
     rank = comm.Get_rank()
 
     ts = 0
@@ -123,7 +142,8 @@ if __name__ == "__main__":
         print("to return", toRet)
     else:
         toRet = stencil2DSubmited(None,radius,data.shape,function=filter_function)
-    
 
-
+if __name__ == "__main__":
+    rank = MPI.COMM_WORLD.Get_rank()
+    cProfile.run('main()', 'cprof/stencilNoTorc/output{}.pstats'.format(rank))
     

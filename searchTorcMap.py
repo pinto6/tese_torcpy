@@ -3,6 +3,9 @@
 import torcpy as torc
 import numpy as np
 import time
+from mpi4py import MPI
+import cProfile
+
 
 def fun(value):
     #time.sleep(0.1)
@@ -86,14 +89,14 @@ def main():
     
     rank = torc.node_id()
 
-    index = int(len(arr)/2)
-    subArrayLen = int(len(arr)/size)
-    index = int(subArrayLen * (size/2) + (subArrayLen/2))
-    if size == 1:
-        index = 80000000
-    print("index array is", index)
-    arr[index] = 2
-    #arr[-1] = 2
+    #index = int(len(arr)/2)
+    #subArrayLen = int(len(arr)/size)
+    #index = int(subArrayLen * (size/2) + (subArrayLen/2))
+    #if size == 1:
+    #    index = 80000000
+    #print("index array is", index)
+    #arr[index] = 2
+    arr[-1] = 2
 
     #arr = [4, 2, 7, 1, 9, 5, 8]
 
@@ -108,5 +111,10 @@ def main():
     ts = time.time() - ts
     print("ended execution","with time",ts)
     
-if __name__ == '__main__':
+
+def torcStart():
     torc.start(main)
+        
+if __name__ == "__main__":
+    rank = MPI.COMM_WORLD.Get_rank()
+    cProfile.run('torcStart()', 'cprof/searchTorcMap/output{}.pstats'.format(rank))
