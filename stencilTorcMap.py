@@ -4,7 +4,7 @@ from mpi4py import MPI
 import torcpy as torc
 import numpy as np
 import time
-import cProfile
+#import cProfile
 
 
 comm = MPI.COMM_WORLD
@@ -142,9 +142,10 @@ def main():
     print("ended execution","with time",ts)
 
 
-def torcStart():
-    torc.start(main)
+#def torcStart():
+#    torc.start(main)
         
 if __name__ == "__main__":
-    rank = MPI.COMM_WORLD.Get_rank()
-    cProfile.run('torcStart()', 'cprof/stencilTorcMap/output{}.pstats'.format(rank))
+    torc.start(main)
+    #rank = MPI.COMM_WORLD.Get_rank()
+    #cProfile.run('torcStart()', 'cprof/stencilTorcMap/output{}.pstats'.format(rank))
