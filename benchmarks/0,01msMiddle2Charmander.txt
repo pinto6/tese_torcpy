@@ -1,0 +1,30 @@
+Thread Count: 1
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+index array is 160000000
+------------------------------------------------------------
+A process or daemon was unable to complete a TCP connection
+to another process:
+  Local host:    charmander-2
+  Remote host:   charmander-4
+This is usually caused by a firewall on the remote host. Please
+check that any firewall (e.g., iptables) has been disabled and
+try again.
+------------------------------------------------------------
+----------------------------------------
+Thread Count: 2
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+index array is 120000000
+160000000
+Value found at index: 120000000 with original value 2 and transformed value 20
+to return (True, 120000000, 2, 20)
+TIME 501.8922531604767
+[32mTORCPY: node[0]: created=2, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+----------------------------------------
