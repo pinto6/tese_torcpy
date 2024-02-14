@@ -4,7 +4,7 @@ import torcpy as torc
 import numpy as np
 import time
 from mpi4py import MPI
-import cProfile
+#import cProfile
 
 def create_2d_array(rows, cols):
     # Create an array of arrays filled with 1
@@ -32,9 +32,10 @@ def stencil():
     print("to return", toRet)
     print("TIME",ts)
 
-def torcStart():
-    torc.start(stencil)
+#def torcStart():
+#    torc.start(stencil)
         
 if __name__ == "__main__":
-    rank = MPI.COMM_WORLD.Get_rank()
-    cProfile.run('torcStart()', 'cprof/stencil/output{}.pstats'.format(rank))
+    torc.start(stencil)
+    #rank = MPI.COMM_WORLD.Get_rank()
+    #cProfile.run('torcStart()', 'cprof/stencil/output{}.pstats'.format(rank))
