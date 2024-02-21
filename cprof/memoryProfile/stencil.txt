@@ -1,0 +1,61 @@
+python3 -m scalene wrapperStencil.py 
+             Memory usage: ▁▁▁▁▁▁▁▃▄▅▁▁▁▁▁▁▁▁▁▁▁▆▁▁▁▁█ (max: 2.386 GB, growth rate:   0%)             
+           /home/mmr.pinto/stencil.py: % of time = 100.00% (2m:46.520s) out of 2m:46.520s.            
+       ╷       ╷       ╷       ╷        ╷       ╷               ╷       ╷                             
+       │Time   │–––––– │–––––– │Memory  │–––––– │–––––––––––    │Copy   │                             
+  Line │Python │native │system │Python  │peak   │timeline/%     │(MB/s) │/home/mmr.pinto/stencil.py   
+╺━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━━┿━━━━━━━┿━━━━━━━━━━━━━━━┿━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
+     1 │       │       │       │        │       │               │       │#!/usr/bin/env python3       
+     2 │       │       │       │        │       │               │       │                             
+     3 │       │       │       │  99%   │   10M │▁▁▁▁▁▁▁▁▁   1% │     1 │import torcpy as torc        
+     4 │       │       │       │        │       │               │       │import numpy as np           
+     5 │       │       │       │        │       │               │       │import time                  
+     6 │       │       │       │        │       │               │       │from mpi4py import MPI       
+     7 │       │       │       │        │       │               │       │#import cProfile             
+     8 │       │       │       │        │       │               │       │                             
+     9 │       │       │       │        │       │               │       │def create_2d_array(rows, c  
+    10 │       │       │       │        │       │               │       │    # Create an array of ar  
+    11 │       │       │       │   4%   │  763M │▁   6%         │       │    result_array = np.ones(  
+    12 │       │       │       │        │       │               │       │                             
+    13 │       │       │       │        │       │               │       │    return result_array      
+    14 │       │       │       │        │       │               │       │                             
+    15 │       │       │       │        │       │               │       │                             
+    16 │       │       │       │        │       │               │       │def filter_function(sub_arr  
+    17 │   19% │       │       │        │       │               │       │    filter = np.array([[0,   
+    18 │       │       │       │        │       │               │       │    result = None            
+    19 │    2% │       │       │        │       │               │       │    radius = filter.shape[0  
+    20 │   58% │       │       │        │       │               │   114 │    result = np.sum(sub_arr  
+    21 │       │       │       │        │       │               │       │    return result            
+    22 │       │       │       │        │       │               │       │                             
+    23 │       │       │       │        │       │               │       │def stencil():               
+    24 │       │       │       │        │       │               │       │    data = create_2d_array(  
+    25 │       │       │       │        │       │               │       │    print(data.shape)        
+    26 │       │       │       │        │       │               │       │                             
+    27 │       │       │       │        │       │               │       │    radius = 1               
+    28 │       │       │       │        │       │               │       │    ts = time.time()         
+    29 │       │       │       │  74%   │ 1.63G │▁▁▁▁▂▂▃▂▂  28% │    23 │    toRet = torc.stencil2D(  
+    30 │       │       │       │        │       │               │       │    ts = time.time() - ts    
+    31 │       │       │       │        │       │               │       │                             
+    32 │       │       │       │        │       │               │       │    print("to return", toRe  
+    33 │       │       │       │        │       │               │       │    print("TIME",ts)         
+    34 │       │       │       │        │       │               │       │                             
+    35 │       │       │       │        │       │               │       │#def torcStart():            
+    36 │       │       │       │        │       │               │       │#    torc.start(stencil)     
+    37 │       │       │       │        │       │               │       │                             
+    38 │       │       │       │        │       │               │       │if __name__ == "__main__":   
+    39 │   10% │    2% │   5%  │  79%   │  906M │▁▁▁▁▂▁▂▂▁  64% │     4 │    torc.start(stencil)      
+    40 │       │       │       │        │       │               │       │    #rank = MPI.COMM_WORLD.  
+    41 │       │       │       │        │       │               │       │    #cProfile.run('torcStar  
+    42 │       │       │       │        │       │               │       │                             
+       │       │       │       │        │       │               │       │                             
+╶──────┼───────┼───────┼───────┼────────┼───────┼───────────────┼───────┼────────────────────────────╴
+       │       │       │       │        │       │               │       │function summary for /home…  
+     9 │       │       │       │   4%   │  763M │█   6%         │       │create_2d_array              
+    16 │   79% │       │       │        │       │               │   114 │filter_function              
+    23 │       │       │       │  74%   │ 1.63G │█████████  28% │    23 │stencil                      
+       ╵       ╵       ╵       ╵        ╵       ╵               ╵       ╵                             
+Top PEAK memory consumption, by line:
+(1)    29:  1668 MB                                                                                    
+(2)    39:   906 MB                                                                                    
+(3)    11:   763 MB                                                                                    
+(4)     3:    10 MB    
