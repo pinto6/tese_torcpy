@@ -1,0 +1,501 @@
+python3 -m scalene wrapperStencil.py 
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime WARNING]  MPI.Query_thread returns 3
+[torcpy.runtime WARNING]  Info: MPI.Query_thread returns MPI.THREAD_MULTIPLE
+TORCPY: main starts
+(10000, 10000)
+to return [[1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ ...
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]]
+TIME 103.96273612976074
+TORCPY: node[7]: created=0, executed=1
+TORCPY: node[0]: created=16, executed=1
+TORCPY: node[13]: created=0, executed=1
+TORCPY: node[11]: created=0, executed=1
+TORCPY: node[1]: created=0, executed=1
+TORCPY: node[3]: created=0, executed=1
+TORCPY: node[12]: created=0, executed=1
+TORCPY: node[2]: created=0, executed=1
+TORCPY: node[15]: created=0, executed=1
+TORCPY: node[6]: created=0, executed=1
+TORCPY: node[10]: created=0, executed=1
+TORCPY: node[8]: created=0, executed=1
+TORCPY: node[9]: created=0, executed=1
+TORCPY: node[4]: created=0, executed=1
+TORCPY: node[14]: created=0, executed=1
+TORCPY: node[5]: created=0, executed=1
+             Memory usage: ▁▁▁▁▁▁▁▃▄▅▁▁▁▁▁▁▁▁▁▁▁▆▁▁▁▁█ (max: 2.386 GB, growth rate:   0%)             
+           /home/mmr.pinto/stencil.py: % of time = 100.00% (2m:46.520s) out of 2m:46.520s.            
+       ╷       ╷       ╷       ╷        ╷       ╷               ╷       ╷                             
+       │Time   │–––––– │–––––– │Memory  │–––––– │–––––––––––    │Copy   │                             
+  Line │Python │native │system │Python  │peak   │timeline/%     │(MB/s) │/home/mmr.pinto/stencil.py   
+╺━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━━┿━━━━━━━┿━━━━━━━━━━━━━━━┿━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
+     1 │       │       │       │        │       │               │       │#!/usr/bin/env python3       
+     2 │       │       │       │        │       │               │       │                             
+     3 │       │       │       │  99%   │   10M │▁▁▁▁▁▁▁▁▁   1% │     1 │import torcpy as torc        
+     4 │       │       │       │        │       │               │       │import numpy as np           
+     5 │       │       │       │        │       │               │       │import time                  
+     6 │       │       │       │        │       │               │       │from mpi4py import MPI       
+     7 │       │       │       │        │       │               │       │#import cProfile             
+     8 │       │       │       │        │       │               │       │                             
+     9 │       │       │       │        │       │               │       │def create_2d_array(rows, c  
+    10 │       │       │       │        │       │               │       │    # Create an array of ar  
+    11 │       │       │       │   4%   │  763M │▁   6%         │       │    result_array = np.ones(  
+    12 │       │       │       │        │       │               │       │                             
+    13 │       │       │       │        │       │               │       │    return result_array      
+    14 │       │       │       │        │       │               │       │                             
+    15 │       │       │       │        │       │               │       │                             
+    16 │       │       │       │        │       │               │       │def filter_function(sub_arr  
+    17 │   19% │       │       │        │       │               │       │    filter = np.array([[0,   
+    18 │       │       │       │        │       │               │       │    result = None            
+    19 │    2% │       │       │        │       │               │       │    radius = filter.shape[0  
+    20 │   58% │       │       │        │       │               │   114 │    result = np.sum(sub_arr  
+    21 │       │       │       │        │       │               │       │    return result            
+    22 │       │       │       │        │       │               │       │                             
+    23 │       │       │       │        │       │               │       │def stencil():               
+    24 │       │       │       │        │       │               │       │    data = create_2d_array(  
+    25 │       │       │       │        │       │               │       │    print(data.shape)        
+    26 │       │       │       │        │       │               │       │                             
+    27 │       │       │       │        │       │               │       │    radius = 1               
+    28 │       │       │       │        │       │               │       │    ts = time.time()         
+    29 │       │       │       │  74%   │ 1.63G │▁▁▁▁▂▂▃▂▂  28% │    23 │    toRet = torc.stencil2D(  
+    30 │       │       │       │        │       │               │       │    ts = time.time() - ts    
+    31 │       │       │       │        │       │               │       │                             
+    32 │       │       │       │        │       │               │       │    print("to return", toRe  
+    33 │       │       │       │        │       │               │       │    print("TIME",ts)         
+    34 │       │       │       │        │       │               │       │                             
+    35 │       │       │       │        │       │               │       │#def torcStart():            
+    36 │       │       │       │        │       │               │       │#    torc.start(stencil)     
+    37 │       │       │       │        │       │               │       │                             
+    38 │       │       │       │        │       │               │       │if __name__ == "__main__":   
+    39 │   10% │    2% │   5%  │  79%   │  906M │▁▁▁▁▂▁▂▂▁  64% │     4 │    torc.start(stencil)      
+    40 │       │       │       │        │       │               │       │    #rank = MPI.COMM_WORLD.  
+    41 │       │       │       │        │       │               │       │    #cProfile.run('torcStar  
+    42 │       │       │       │        │       │               │       │                             
+       │       │       │       │        │       │               │       │                             
+╶──────┼───────┼───────┼───────┼────────┼───────┼───────────────┼───────┼────────────────────────────╴
+       │       │       │       │        │       │               │       │function summary for /home…  
+     9 │       │       │       │   4%   │  763M │█   6%         │       │create_2d_array              
+    16 │   79% │       │       │        │       │               │   114 │filter_function              
+    23 │       │       │       │  74%   │ 1.63G │█████████  28% │    23 │stencil                      
+       ╵       ╵       ╵       ╵        ╵       ╵               ╵       ╵                             
+Top PEAK memory consumption, by line:
+(1)    29:  1668 MB                                                                                    
+(2)    39:   906 MB                                                                                    
+(3)    11:   763 MB                                                                                    
+(4)     3:    10 MB                                                                                    
+mmr.pinto@charmander-1:~$ ^C
+mmr.pinto@charmander-1:~$ python3 -m scalene wrapperStencilNoTorc.py 
+ended execution with time 106.04141592979431
+to return (0, array([[1., 2., 2., ..., 2., 2., 2.],
+       [1., 2., 2., ..., 2., 2., 2.],
+       [1., 2., 2., ..., 2., 2., 2.],
+       ...,
+       [1., 2., 2., ..., 2., 2., 2.],
+       [1., 2., 2., ..., 2., 2., 2.],
+       [1., 2., 2., ..., 2., 2., 2.]]))
+             Memory usage: ▁▃▁▃▁▁▅▅▅▅▅▃▃▄▃▄▄▄▄▄█▇▆▆▄▄▄ (max: 2.245 GB, growth rate:   0%)             
+        /home/mmr.pinto/stencilNoTorc.py: % of time = 100.00% (2m:48.651s) out of 2m:48.651s.         
+       ╷       ╷       ╷       ╷        ╷       ╷               ╷       ╷                             
+       │Time   │–––––– │–––––– │Memory  │–––––– │–––––––––––    │Copy   │                             
+  Line │Python │native │system │Python  │peak   │timeline/%     │(MB/s) │/home/mmr.pinto/stencilNoT…  
+╺━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━━┿━━━━━━━┿━━━━━━━━━━━━━━━┿━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
+     1 │       │       │       │        │       │               │       │#!/usr/bin/env python3       
+     2 │       │       │       │        │       │               │       │                             
+     3 │       │       │       │        │       │               │       │from mpi4py import MPI       
+     4 │       │       │       │  99%   │   10M │▁▁▁▁▁▁▁▁▁      │     1 │import numpy as np           
+     5 │       │       │       │        │       │               │       │import time                  
+     6 │       │       │       │        │       │               │       │#import cProfile             
+     7 │       │       │       │        │       │               │       │                             
+     8 │       │       │       │        │       │               │       │                             
+     9 │       │       │       │        │       │               │       │comm = MPI.COMM_WORLD        
+    10 │       │       │       │        │       │               │       │                             
+    11 │       │       │       │        │       │               │       │def stencilOperation(sub_da  
+    12 │       │       │       │        │       │               │       │    size = MPI.COMM_WORLD.G  
+    13 │       │       │       │        │       │               │       │    rank = MPI.COMM_WORLD.G  
+    14 │       │       │       │        │       │               │       │                             
+    15 │       │       │       │        │       │               │       │    # Create buffers for ex  
+    16 │       │       │       │        │       │               │       │    send_buffer_top = np.ze  
+    17 │       │       │       │        │       │               │       │    send_buffer_bottom = np  
+    18 │       │       │       │        │       │               │       │    recv_buffer_top = np.ze  
+    19 │       │       │       │        │       │               │       │    recv_buffer_bottom = np  
+    20 │       │       │       │        │       │               │       │                             
+    21 │       │       │       │        │       │               │       │                             
+    22 │       │       │       │        │       │               │       │    # Perform stencil compu  
+    23 │       │       │       │        │       │               │       │    if rank > 0:             
+    24 │       │       │       │        │       │               │       │        send_buffer_top = s  
+    25 │       │       │       │        │       │               │       │        comm.Isend(send_buf  
+    26 │       │       │       │        │       │               │       │        comm.Recv(recv_buff  
+    27 │       │       │       │        │       │               │       │        sub_data[:radius, :  
+    28 │       │       │       │        │       │               │       │                             
+    29 │       │       │       │        │       │               │       │    if rank < size - 1:      
+    30 │       │       │       │        │       │               │       │        send_buffer_bottom   
+    31 │       │       │       │        │       │               │       │        comm.Isend(send_buf  
+    32 │       │       │       │        │       │               │       │        comm.Recv(recv_buff  
+    33 │       │       │       │        │       │               │       │        sub_data[-radius:,   
+    34 │       │       │       │        │       │               │       │                             
+    35 │       │       │       │        │       │               │       │                             
+    36 │       │       │       │        │       │               │       │    # Apply filter function  
+    37 │       │       │       │  22%   │   48M │▁▁▁▁▁▁▁▁▁   3% │       │    result = np.zeros((sub_  
+    38 │       │       │       │        │       │               │       │    start = radius           
+    39 │       │       │       │        │       │               │       │    end = sub_data.shape[0]  
+    40 │       │       │       │        │       │               │       │                             
+    41 │       │       │       │        │       │               │       │    for i in range(start, e  
+    42 │       │       │       │        │       │               │       │        for j in range(radi  
+    43 │    6% │       │       │        │       │               │       │            window = sub_da  
+    44 │       │       │       │        │       │               │       │            aux = filter_fu  
+    45 │    4% │       │       │        │       │               │       │            result[i - radi  
+    46 │       │       │       │        │       │               │       │                             
+    47 │       │       │       │        │       │               │       │                             
+    48 │       │       │       │        │       │               │       │    # Update sub_data with   
+    49 │       │       │       │        │       │               │       │    sub_data = result        
+    50 │       │       │       │        │       │               │       │                             
+    51 │       │       │       │        │       │               │       │    # Gather the results fr  
+    52 │       │       │       │        │       │               │       │    gathered_data = None     
+    53 │       │       │       │        │       │               │       │    if rank == 0:            
+    54 │       │       │       │  90%   │  763M │▁   3%         │       │        gathered_data = np.  
+    55 │       │    4% │       │  90%   │  763M │▂▁▂▂▁▂▁▂▁  23% │     5 │    comm.Gather(sub_data, g  
+    56 │       │       │       │        │       │               │       │                             
+    57 │       │       │       │        │       │               │       │    return gathered_data     
+    58 │       │       │       │        │       │               │       │                             
+    59 │       │       │       │        │       │               │       │                             
+    60 │       │       │       │        │       │               │       │def stencil2DSubmited(data,  
+    61 │       │       │       │        │       │               │       │    size = MPI.COMM_WORLD.G  
+    62 │       │       │       │        │       │               │       │    rank = MPI.COMM_WORLD.G  
+    63 │       │       │       │        │       │               │       │    num_rows = (originalSha  
+    64 │       │       │       │        │       │               │       │    # Scatter the data to a  
+    65 │       │       │       │        │       │               │       │    if rank == 0:            
+    66 │       │       │       │ 100%   │ 1.49G │▁▁▁▁▁▁▁▁▁   9% │    14 │        local_arr = comm.sc  
+    67 │       │       │       │        │       │               │       │    else:                    
+    68 │       │       │       │ 100%   │   95M │▁▁▁▁▁▁▁▁▁   6% │     4 │        local_arr = comm.sc  
+    69 │       │       │       │        │       │               │       │                             
+    70 │       │       │       │        │       │               │       │                             
+    71 │       │       │       │        │       │               │       │    worker_chunk_size = (nu  
+    72 │       │       │       │        │       │               │       │                             
+    73 │       │       │       │        │       │               │       │    if local_arr.shape[0] !  
+    74 │       │       │       │        │       │               │       │        aux_arr = np.zeros(  
+    75 │       │       │       │        │       │               │       │        aux_arr[:local_arr.  
+    76 │       │       │       │        │       │               │       │        local_arr = aux_arr  
+    77 │       │       │       │        │       │               │       │                             
+    78 │       │       │       │        │       │               │       │    #local_arr = local_arr[  
+    79 │       │       │       │        │       │               │       │                             
+    80 │       │       │       │  28%   │   48M │▁▁▁▁▁▁▁▁▁   3% │       │    sub_data = np.zeros((lo  
+    81 │       │       │       │        │       │               │       │                             
+    82 │       │       │       │        │       │               │       │                             
+    83 │       │       │       │        │       │               │       │    if rank < size - 1:      
+    84 │       │       │       │        │       │               │       │        sub_data[radius:-ra  
+    85 │       │       │       │        │       │               │       │    else:                    
+    86 │       │       │       │        │       │               │       │        # Last rank handles  
+    87 │       │       │       │        │       │               │       │        sub_data[radius:-ra  
+    88 │       │       │       │        │       │               │       │                             
+    89 │       │       │       │        │       │               │       │                             
+    90 │       │       │       │        │       │               │       │    # Perform stencil compu  
+    91 │       │       │       │        │       │               │       │    result = stencilOperati  
+    92 │       │       │       │        │       │               │       │                             
+    93 │       │       │       │        │       │               │       │    if rank == 0:            
+    94 │       │       │       │        │       │               │       │        result = (rank,resu  
+    95 │       │       │       │        │       │               │       │        return result        
+    96 │       │       │       │        │       │               │       │                             
+    97 │       │       │       │        │       │               │       │def filter_function(sub_arr  
+    98 │   19% │       │       │        │       │               │     1 │    filter = np.array([[0,   
+    99 │       │       │       │        │       │               │       │    result = None            
+   100 │    2% │       │       │        │       │               │       │    radius = filter.shape[0  
+   101 │   60% │       │       │        │       │               │   112 │    result = np.sum(sub_arr  
+   102 │       │       │       │        │       │               │       │    return result            
+   103 │       │       │       │        │       │               │       │                             
+   104 │       │       │       │        │       │               │       │def create_2d_array(rows, c  
+   105 │       │       │       │        │       │               │       │    # Create an array of ar  
+   106 │       │       │       │   2%   │  762M │▂▂▂▂▂▂▂▂▂  52% │       │    result_array = np.ones(  
+   107 │       │       │       │        │       │               │       │                             
+   108 │       │       │       │        │       │               │       │    return result_array      
+   109 │       │       │       │        │       │               │       │                             
+   110 │       │       │       │        │       │               │       │                             
+   111 │       │       │       │        │       │               │       │# Test the function          
+   112 │       │       │       │        │       │               │       │#if __name__ == "__main__":  
+   113 │       │       │       │        │       │               │       │#    data = create_2d_array  
+   114 │       │       │       │        │       │               │       │                             
+   115 │       │       │       │        │       │               │       │#    radius = 1              
+   116 │       │       │       │        │       │               │       │#    rank = comm.Get_rank()  
+   117 │       │       │       │        │       │               │       │                             
+   118 │       │       │       │        │       │               │       │#    ts = 0                  
+   119 │       │       │       │        │       │               │       │#    if rank == 0:           
+   120 │       │       │       │        │       │               │       │#        ts = time.time()    
+   121 │       │       │       │        │       │               │       │#        toRet = stencil2DS  
+   122 │       │       │       │        │       │               │       │#        ts = time.time() -  
+   123 │       │       │       │        │       │               │       │#        print("ended execu  
+   124 │       │       │       │        │       │               │       │#        print("to return",  
+   125 │       │       │       │        │       │               │       │#    else:                   
+   126 │       │       │       │        │       │               │       │#        toRet = stencil2DS  
+   127 │       │       │       │        │       │               │       │                             
+   128 │       │       │       │        │       │               │       │                             
+   129 │       │       │       │        │       │               │       │def main():                  
+   130 │       │       │       │        │       │               │       │    data = create_2d_array(  
+   131 │       │       │       │        │       │               │       │                             
+   132 │       │       │       │        │       │               │       │    radius = 1               
+   133 │       │       │       │        │       │               │       │    rank = comm.Get_rank()   
+   134 │       │       │       │        │       │               │       │                             
+   135 │       │       │       │        │       │               │       │    ts = 0                   
+   136 │       │       │       │        │       │               │       │    if rank == 0:            
+   137 │       │       │       │        │       │               │       │        ts = time.time()     
+   138 │       │       │       │        │       │               │       │        toRet = stencil2DSu  
+   139 │       │       │       │        │       │               │       │        ts = time.time() -   
+   140 │       │       │       │        │       │               │       │        print("ended execut  
+   141 │       │       │       │        │       │               │       │        print("to return",   
+   142 │       │       │       │        │       │               │       │    else:                    
+   143 │       │       │       │        │       │               │       │        toRet = stencil2DSu  
+   144 │       │       │       │        │       │               │       │                             
+   145 │       │       │       │        │       │               │       │if __name__ == "__main__":   
+   146 │       │       │       │        │       │               │       │    main()                   
+   147 │       │       │       │        │       │               │       │    #rank = MPI.COMM_WORLD.  
+   148 │       │       │       │        │       │               │       │    #cProfile.run('main()',  
+   149 │       │       │       │        │       │               │       │                             
+   150 │       │       │       │        │       │               │       │                             
+       │       │       │       │        │       │               │       │                             
+╶──────┼───────┼───────┼───────┼────────┼───────┼───────────────┼───────┼────────────────────────────╴
+       │       │       │       │        │       │               │       │function summary for /home…  
+    11 │   11% │    4% │       │  83%   │  763M │█████████  29% │     5 │stencilOperation             
+    60 │       │       │       │  87%   │ 1.49G │█████████  18% │    18 │stencil2DSubmited            
+    97 │   82% │       │       │        │       │               │   113 │filter_function              
+   104 │       │       │       │   2%   │  762M │█████████  52% │       │create_2d_array              
+       ╵       ╵       ╵       ╵        ╵       ╵               ╵       ╵                             
+Top PEAK memory consumption, by line:
+(1)    66:  1524 MB                                                                                    
+(2)    54:   763 MB                                                                                    
+(3)    55:   763 MB                                                                                    
+(4)   106:   762 MB                                                                                    
+(5)    68:    95 MB                                                                                    
+mmr.pinto@charmander-1:~$ python3 -m scalene wrapperStencilTorcMap.py 
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime DEBUG]  mpi4py module was succesfully imported
+[torcpy.runtime WARNING]  MPI.Query_thread returns 3
+[torcpy.runtime WARNING]  Info: MPI.Query_thread returns MPI.THREAD_MULTIPLE
+TORCPY: main starts
+RESULT IS  (0, array([[1., 2., 2., ..., 2., 2., 2.],
+       [1., 2., 2., ..., 2., 2., 2.],
+       [1., 2., 2., ..., 2., 2., 2.],
+       ...,
+       [1., 2., 2., ..., 2., 2., 2.],
+       [1., 2., 2., ..., 2., 2., 2.],
+       [1., 2., 2., ..., 2., 2., 2.]]))
+ended execution with time 100.2054831981659
+TORCPY: node[0]: created=16, executed=1
+TORCPY: node[7]: created=0, executed=1
+TORCPY: node[4]: created=0, executed=1
+TORCPY: node[8]: created=0, executed=1
+TORCPY: node[12]: created=0, executed=1
+TORCPY: node[5]: created=0, executed=1
+TORCPY: node[13]: created=0, executed=1
+TORCPY: node[1]: created=0, executed=1
+TORCPY: node[9]: created=0, executed=1
+TORCPY: node[6]: created=0, executed=1
+TORCPY: node[3]: created=0, executed=1
+TORCPY: node[14]: created=0, executed=1
+TORCPY: node[15]: created=0, executed=1
+TORCPY: node[2]: created=0, executed=1
+TORCPY: node[10]: created=0, executed=1
+TORCPY: node[11]: created=0, executed=1
+             Memory usage: ▁▃▁▄▄▁▁▄▄▄▄▄▁▁▅▅▅▅▅▅▁▅▆▁▁▃▃ (max: 2.339 GB, growth rate:   0%)             
+        /home/mmr.pinto/stencilTorcMap.py: % of time = 100.00% (2m:42.816s) out of 2m:42.816s.        
+       ╷       ╷       ╷       ╷        ╷       ╷               ╷       ╷                             
+       │Time   │–––––– │–––––– │Memory  │–––––– │–––––––––––    │Copy   │                             
+  Line │Python │native │system │Python  │peak   │timeline/%     │(MB/s) │/home/mmr.pinto/stencilTor…  
+╺━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━━┿━━━━━━━┿━━━━━━━━━━━━━━━┿━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
+     1 │       │       │       │        │       │               │       │#!/usr/bin/env python3       
+     2 │       │       │       │        │       │               │       │                             
+     3 │       │       │       │        │       │               │       │from mpi4py import MPI       
+     4 │       │       │       │  99%   │   10M │▁▁▁▁▁▁▁▁▁   2% │     1 │import torcpy as torc        
+     5 │       │       │       │        │       │               │       │import numpy as np           
+     6 │       │       │       │        │       │               │       │import time                  
+     7 │       │       │       │        │       │               │       │#import cProfile             
+     8 │       │       │       │        │       │               │       │                             
+     9 │       │       │       │        │       │               │       │                             
+    10 │       │       │       │        │       │               │       │comm = MPI.COMM_WORLD        
+    11 │       │       │       │        │       │               │       │                             
+    12 │       │       │       │        │       │               │       │def stencilOperation(sub_da  
+    13 │       │       │       │        │       │               │       │                             
+    14 │       │       │       │        │       │               │       │    size = torc.num_nodes()  
+    15 │       │       │       │        │       │               │       │    rank = torc.node_id()    
+    16 │       │       │       │        │       │               │       │                             
+    17 │       │       │       │        │       │               │       │    # Create buffers for ex  
+    18 │       │       │       │        │       │               │       │    send_buffer_top = np.ze  
+    19 │       │       │       │        │       │               │       │    send_buffer_bottom = np  
+    20 │       │       │       │        │       │               │       │    recv_buffer_top = np.ze  
+    21 │       │       │       │        │       │               │       │    recv_buffer_bottom = np  
+    22 │       │       │       │        │       │               │       │                             
+    23 │       │       │       │        │       │               │       │                             
+    24 │       │       │       │        │       │               │       │    # Perform stencil compu  
+    25 │       │       │       │        │       │               │       │    if rank > 0:             
+    26 │       │       │       │        │       │               │       │        send_buffer_top = s  
+    27 │       │       │       │        │       │               │       │        comm.Isend(send_buf  
+    28 │       │       │       │        │       │               │       │        comm.Recv(recv_buff  
+    29 │       │       │       │        │       │               │       │        sub_data[:radius, :  
+    30 │       │       │       │        │       │               │       │                             
+    31 │       │       │       │        │       │               │       │    if rank < size - 1:      
+    32 │       │       │       │        │       │               │       │        send_buffer_bottom   
+    33 │       │       │       │        │       │               │       │        comm.Isend(send_buf  
+    34 │       │       │       │        │       │               │       │        comm.Recv(recv_buff  
+    35 │       │       │       │        │       │               │       │        sub_data[-radius:,   
+    36 │       │       │       │        │       │               │       │                             
+    37 │       │       │       │        │       │               │       │    # Apply filter function  
+    38 │       │       │       │  38%   │   48M │▁▁▁▁▁▁▁▁▁   7% │       │    result = np.zeros((sub_  
+    39 │       │       │       │        │       │               │       │    start = radius           
+    40 │       │       │       │        │       │               │       │    end = sub_data.shape[0]  
+    41 │       │       │       │        │       │               │       │                             
+    42 │       │       │       │        │       │               │       │    for i in range(start, e  
+    43 │       │       │       │        │       │               │       │        for j in range(radi  
+    44 │    6% │       │       │        │       │               │       │            window = sub_da  
+    45 │       │       │       │        │       │               │       │            aux = filter_fu  
+    46 │    4% │       │       │        │       │               │       │            result[i - radi  
+    47 │       │       │       │        │       │               │       │                             
+    48 │       │       │       │        │       │               │       │                             
+    49 │       │       │       │        │       │               │       │    # Update sub_data with   
+    50 │       │       │       │        │       │               │       │    sub_data = result        
+    51 │       │       │       │        │       │               │       │                             
+    52 │       │       │       │        │       │               │       │    # Gather the results fr  
+    53 │       │       │       │        │       │               │       │    gathered_data = None     
+    54 │       │       │       │        │       │               │       │    if rank == 0:            
+    55 │       │       │       │  90%   │  763M │▁   7%         │       │        gathered_data = np.  
+    56 │       │    3% │       │  90%   │  763M │▂▂▁▁▂▁▁▂▁  51% │     2 │    comm.Gather(sub_data, g  
+    57 │       │       │       │        │       │               │       │                             
+    58 │       │       │       │        │       │               │       │    return gathered_data     
+    59 │       │       │       │        │       │               │       │                             
+    60 │       │       │       │        │       │               │       │                             
+    61 │       │       │       │        │       │               │       │def stencil2DSubmited(data)  
+    62 │       │       │       │        │       │               │       │    originalShape=(10000,10  
+    63 │       │       │       │        │       │               │       │    radius = 1               
+    64 │       │       │       │        │       │               │       │    function=filter_functio  
+    65 │       │       │       │        │       │               │       │    size = torc.num_nodes()  
+    66 │       │       │       │        │       │               │       │    rank = torc.node_id()    
+    67 │       │       │       │        │       │               │       │    num_rows = (originalSha  
+    68 │       │       │       │        │       │               │       │                             
+    69 │       │       │       │        │       │               │       │    if data.shape[0] != num  
+    70 │       │       │       │        │       │               │       │        aux_arr = np.zeros(  
+    71 │       │       │       │        │       │               │       │        aux_arr[:data.shape  
+    72 │       │       │       │        │       │               │       │        data = aux_arr       
+    73 │       │       │       │        │       │               │       │                             
+    74 │       │       │       │        │       │               │       │                             
+    75 │       │       │       │  55%   │   48M │▁▁▁▁▁▁▁▁▁   7% │       │    sub_data = np.zeros((da  
+    76 │       │       │       │        │       │               │       │                             
+    77 │       │       │       │        │       │               │       │                             
+    78 │       │       │       │        │       │               │       │    sub_data[radius:-radius  
+    79 │       │       │       │        │       │               │       │                             
+    80 │       │       │       │        │       │               │       │                             
+    81 │       │       │       │        │       │               │       │    # Perform stencil compu  
+    82 │       │       │       │        │       │               │       │    result = stencilOperati  
+    83 │       │       │       │        │       │               │       │                             
+    84 │       │       │       │        │       │               │       │                             
+    85 │       │       │       │        │       │               │       │    if rank == 0:            
+    86 │       │       │       │        │       │               │       │        result = (rank,resu  
+    87 │       │       │       │        │       │               │       │        return result        
+    88 │       │       │       │        │       │               │       │    return None              
+    89 │       │       │       │        │       │               │       │                             
+    90 │       │       │       │        │       │               │       │def filter_function(sub_arr  
+    91 │   19% │       │       │        │       │               │     1 │    filter = np.array([[0,   
+    92 │   59% │       │       │        │       │               │   116 │    result = np.sum(sub_arr  
+    93 │       │       │       │        │       │               │       │    return result            
+    94 │       │       │       │        │       │               │       │                             
+    95 │       │       │       │        │       │               │       │def create_2d_array(rows, c  
+    96 │       │       │       │        │       │               │       │    # Create an array of ar  
+    97 │       │       │       │   3%   │  763M │▁   7%         │       │    result_array = np.ones(  
+    98 │       │       │       │        │       │               │       │                             
+    99 │       │       │       │        │       │               │       │    return result_array      
+   100 │       │       │       │        │       │               │       │                             
+   101 │       │       │       │        │       │               │       │def subArray(arr,nodes):     
+   102 │       │       │       │        │       │               │       │    length = arr.shape[0]    
+   103 │       │       │       │        │       │               │       │    chunk_size = (length +   
+   104 │       │       │       │        │       │               │       │    sub_arr= [arr[i:i+chunk  
+   105 │       │       │       │        │       │               │       │    return sub_arr           
+   106 │       │       │       │        │       │               │       │                             
+   107 │       │       │       │        │       │               │       │                             
+   108 │       │       │       │        │       │               │       │                             
+   109 │       │       │       │        │       │               │       │def main():                  
+   110 │       │       │       │        │       │               │       │                             
+   111 │       │       │       │        │       │               │       │    size = torc.num_nodes()  
+   112 │       │       │       │        │       │               │       │                             
+   113 │       │       │       │        │       │               │       │    rank = torc.node_id()    
+   114 │       │       │       │        │       │               │       │                             
+   115 │       │       │       │        │       │               │       │                             
+   116 │       │       │       │        │       │               │       │                             
+   117 │       │       │       │        │       │               │       │    data = create_2d_array(  
+   118 │       │       │       │        │       │               │       │                             
+   119 │       │       │       │        │       │               │       │    result = None            
+   120 │       │       │       │        │       │               │       │    ts = time.time()         
+   121 │       │       │       │        │       │               │       │    sub_arr= subArray(data,  
+   122 │       │       │       │  61%   │  832M │▁▁▁▁▁▁▁▁▁  18% │    14 │    results = torc.map(sten  
+   123 │       │       │       │        │       │               │       │                             
+   124 │       │       │       │        │       │               │       │    for r in results:        
+   125 │       │       │       │        │       │               │       │        if r != None:        
+   126 │       │       │       │        │       │               │       │            result= r        
+   127 │       │       │       │        │       │               │       │            break            
+   128 │       │       │       │        │       │               │       │                             
+   129 │       │       │       │        │       │               │       │    #gathered_data = None    
+   130 │       │       │       │        │       │               │       │    #if rank == 0:           
+   131 │       │       │       │        │       │               │       │    #    gathered_data = np  
+   132 │       │       │       │        │       │               │       │                             
+   133 │       │       │       │        │       │               │       │    #last_chunk_size = (dat  
+   134 │       │       │       │        │       │               │       │    #for r in results:       
+   135 │       │       │       │        │       │               │       │    #    if r[0] < size - 1  
+   136 │       │       │       │        │       │               │       │    #        gathered_data[  
+   137 │       │       │       │        │       │               │       │    #    else:               
+   138 │       │       │       │        │       │               │       │    #        gathered_data[  
+   139 │       │       │       │        │       │               │       │                             
+   140 │       │       │       │        │       │               │       │    ts = time.time() - ts    
+   141 │       │       │       │        │       │               │       │    print("RESULT IS ",resu  
+   142 │       │       │       │        │       │               │       │    print("ended execution"  
+   143 │       │       │       │        │       │               │       │                             
+   144 │       │       │       │        │       │               │       │                             
+   145 │       │       │       │        │       │               │       │#def torcStart():            
+   146 │       │       │       │        │       │               │       │#    torc.start(main)        
+   147 │       │       │       │        │       │               │       │                             
+   148 │       │       │       │        │       │               │       │if __name__ == "__main__":   
+   149 │       │       │   4%  │        │       │               │       │    torc.start(main)         
+   150 │       │       │       │        │       │               │       │    #rank = MPI.COMM_WORLD.  
+   151 │       │       │       │        │       │               │       │    #cProfile.run('torcStar  
+       │       │       │       │        │       │               │       │                             
+╶──────┼───────┼───────┼───────┼────────┼───────┼───────────────┼───────┼────────────────────────────╴
+       │       │       │       │        │       │               │       │function summary for /home…  
+    12 │   11% │    4% │       │  84%   │  763M │█████████  66% │     2 │stencilOperation             
+    61 │       │       │       │  55%   │   48M │█████████   7% │       │stencil2DSubmited            
+    90 │   79% │       │       │        │       │               │   117 │filter_function              
+    95 │       │       │       │   3%   │  763M │█   7%         │       │create_2d_array              
+   109 │       │       │       │  61%   │  832M │█████████  18% │    14 │main                         
+       ╵       ╵       ╵       ╵        ╵       ╵               ╵       ╵                             
+Top PEAK memory consumption, by line:
+(1)   122:   832 MB                                                                                    
+(2)    97:   763 MB                                                                                    
+(3)    55:   763 MB                                                                                    
+(4)    56:   763 MB                                                                                    
+(5)    75:    48 MB   

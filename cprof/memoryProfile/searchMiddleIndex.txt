@@ -1,0 +1,101 @@
+python3 -m scalene wrapperSearch.py
+             Memory usage: ▁▁▂▄▇▇▇▇█▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▅▁ (max: 2.991 GB, growth rate:   0%)             
+            /home/mmr.pinto/search.py: % of time = 100.00% (1m:15.235s) out of 1m:15.235s.            
+       ╷       ╷       ╷       ╷        ╷       ╷               ╷       ╷                             
+       │Time   │–––––– │–––––– │Memory  │–––––– │–––––––––––    │Copy   │                             
+  Line │Python │native │system │Python  │peak   │timeline/%     │(MB/s) │/home/mmr.pinto/search.py    
+╺━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━━┿━━━━━━━┿━━━━━━━━━━━━━━━┿━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
+     1 │       │       │       │        │       │               │       │#!/usr/bin/env python3       
+     2 │       │       │       │        │       │               │       │                             
+     3 │       │       │       │  99%   │   10M │▁▁▁▁▁▁▁▁▁   2% │     1 │import torcpy as torc        
+     4 │       │       │       │        │       │               │       │import numpy as np           
+     5 │       │       │       │        │       │               │       │import time                  
+     6 │       │       │       │        │       │               │       │from mpi4py import MPI       
+     7 │       │       │       │        │       │               │       │#import cProfile             
+     8 │       │       │       │        │       │               │       │                             
+     9 │       │       │       │        │       │               │       │def fun(value):              
+    10 │       │       │       │        │       │               │       │    #time.sleep(0.1)         
+    11 │       │       │       │        │       │               │       │    #return value == 20      
+    12 │    1% │       │       │        │       │               │       │    start_time = time.time(  
+    13 │       │       │       │        │       │               │       │    total_sum = 0            
+    14 │    7% │    1% │       │        │       │               │       │    for i in range(1, 10000  
+    15 │    9% │    1% │       │        │       │               │       │        total_sum += i       
+    16 │       │       │       │        │       │               │       │                             
+    17 │       │       │       │        │       │               │       │        # Check if 100 mill  
+    18 │   35% │    5% │   2%  │        │       │               │     1 │        elapsed_time = time  
+    19 │    6% │       │       │        │       │               │       │        if elapsed_time >=   
+    20 │       │       │       │        │       │               │       │            break            
+    21 │       │       │       │        │       │               │       │                             
+    22 │       │       │       │        │       │               │       │    return value == 20       
+    23 │       │       │       │        │       │               │       │                             
+    24 │       │       │       │        │       │               │       │def transform(value):        
+    25 │       │       │       │        │       │               │       │    return value*10 if valu  
+    26 │       │       │       │        │       │               │       │                             
+    27 │       │       │       │        │       │               │       │                             
+    28 │       │       │       │        │       │               │       │def searchTest():            
+    29 │       │       │       │        │       │               │       │    arr = [4, 2, 7, 1, 9, 5  
+    30 │       │       │       │        │       │               │       │                             
+    31 │       │       │       │        │       │               │       │    arr = [3,3,3,3,3,3,3,3,  
+    32 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    33 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    34 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    35 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    36 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    37 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    38 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    39 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    40 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    41 │       │       │       │        │       │               │       │                             
+    42 │       │       │       │        │       │               │       │    arr = arr + arr + arr +  
+    43 │       │       │       │        │       │               │       │    arr = arr + arr          
+    44 │       │       │       │        │       │               │       │    arr = arr + arr + arr +  
+    45 │       │       │       │        │       │               │       │    arr = arr + arr          
+    46 │       │       │       │ 100%   │   12M │▁              │       │    arr = arr + arr + arr +  
+    47 │       │       │       │        │       │               │       │    arr = arr + arr          
+    48 │       │       │       │ 100%   │  109M │▁▁▁▁▁▁▁   2%   │       │    arr = arr + arr + arr +  
+    49 │       │       │       │ 100%   │  122M │▁▁   2%        │       │    arr = arr + arr          
+    50 │       │       │       │ 100%   │ 1.01G │▁▁▁▁▁▁▁▁  22%  │       │    arr = arr + arr + arr +  
+    51 │       │       │       │ 100%   │ 1.19G │▁▁  16%        │       │    arr = arr + arr          
+    52 │       │       │       │        │       │               │       │                             
+    53 │       │       │       │        │       │               │       │    from mpi4py import MPI   
+    54 │       │       │       │        │       │               │       │    numNodes = MPI.COMM_WOR  
+    55 │       │       │       │        │       │               │       │    index = int(len(arr)/2)  
+    56 │       │       │       │        │       │               │       │    subArrayLen = int(len(a  
+    57 │       │       │       │        │       │               │       │    index = int(subArrayLen  
+    58 │       │       │       │        │       │               │       │    if numNodes == 1:        
+    59 │       │       │       │        │       │               │       │        index = 80000000     
+    60 │       │       │       │        │       │               │       │    #print("index array is"  
+    61 │       │       │       │        │       │               │       │    arr[index] = 2           
+    62 │       │       │       │        │       │               │       │    #arr[-1] = 2             
+    63 │       │       │       │        │       │               │       │    print(len(arr))          
+    64 │       │       │       │        │       │               │       │                             
+    65 │       │       │       │        │       │               │       │    #arr = [4, 2, 7, 1, 9,   
+    66 │       │       │       │        │       │               │       │    ts = time.time()         
+    67 │       │       │       │ 100%   │ 1.79G │▁▂▂▃▂▂▂▂▁  26% │     4 │    toRet = torc.search(arr  
+    68 │       │       │       │        │       │               │       │    ts = time.time() - ts    
+    69 │       │       │       │        │       │               │       │    print("to return", toRe  
+    70 │       │       │       │        │       │               │       │    print("TIME",ts)         
+    71 │       │       │       │        │       │               │       │    return toRet             
+    72 │       │       │       │        │       │               │       │                             
+    73 │       │       │       │        │       │               │       │#def torcStart():            
+    74 │       │       │       │        │       │               │       │#    torc.start(searchTest)  
+    75 │       │       │       │        │       │               │       │                             
+    76 │       │       │       │        │       │               │       │if __name__ == "__main__":   
+    77 │   13% │    6% │   6%  │ 100%   │  160M │▁▁▁▁▁▁▁▁▁  31% │     1 │    torc.start(searchTest)   
+    78 │       │       │       │        │       │               │       │                             
+    79 │       │       │       │        │       │               │       │    #rank = MPI.COMM_WORLD.  
+    80 │       │       │       │        │       │               │       │    #cProfile.run('torcStar  
+    81 │       │       │       │        │       │               │       │                             
+       │       │       │       │        │       │               │       │                             
+╶──────┼───────┼───────┼───────┼────────┼───────┼───────────────┼───────┼────────────────────────────╴
+       │       │       │       │        │       │               │       │function summary for /home…  
+     9 │   59% │    8% │   4%  │        │       │               │     1 │fun                          
+    24 │       │       │       │        │       │               │       │transform                    
+    28 │       │       │       │ 100%   │ 1.79G │█████████  67% │     4 │searchTest                   
+       ╵       ╵       ╵       ╵        ╵       ╵               ╵       ╵                             
+Top PEAK memory consumption, by line:
+(1)    67:  1830 MB                                                                                    
+(2)    51:  1221 MB                                                                                    
+(3)    50:  1037 MB                                                                                    
+(4)    77:   160 MB                                                                                    
+(5)    49:   122 MB                        

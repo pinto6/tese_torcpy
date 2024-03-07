@@ -51,15 +51,15 @@ def searchTest():
     arr = arr + arr
 
     from mpi4py import MPI
-    #numNodes = MPI.COMM_WORLD.Get_size()
-    #index = int(len(arr)/2)
-    #subArrayLen = int(len(arr)/numNodes)
-    #index = int(subArrayLen * (numNodes/2) + (subArrayLen/2))
-    #if numNodes == 1:
-    #    index = 80000000
+    numNodes = MPI.COMM_WORLD.Get_size()
+    index = int(len(arr)/2)
+    subArrayLen = int(len(arr)/numNodes)
+    index = int(subArrayLen * (numNodes/2) + (subArrayLen/2))
+    if numNodes == 1:
+        index = 80000000
     #print("index array is", index)
-    #arr[index] = 2
-    arr[-1] = 2
+    arr[index] = 2
+    #arr[-1] = 2
     print(len(arr))
 
     #arr = [4, 2, 7, 1, 9, 5, 8]

@@ -89,14 +89,14 @@ def main():
     
     rank = torc.node_id()
 
-    #index = int(len(arr)/2)
-    #subArrayLen = int(len(arr)/size)
-    #index = int(subArrayLen * (size/2) + (subArrayLen/2))
-    #if size == 1:
-    #    index = 80000000
+    index = int(len(arr)/2)
+    subArrayLen = int(len(arr)/size)
+    index = int(subArrayLen * (size/2) + (subArrayLen/2))
+    if size == 1:
+        index = 80000000
     #print("index array is", index)
-    #arr[index] = 2
-    arr[-1] = 2
+    arr[index] = 2
+    #arr[-1] = 2
 
     #arr = [4, 2, 7, 1, 9, 5, 8]
 
