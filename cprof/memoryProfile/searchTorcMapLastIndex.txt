@@ -1,0 +1,143 @@
+python3 -m scalene wrapperSearchTorcMap.py
+             Memory usage: ▁▁▁▁▁▁▁▁▁▁▃▄▄▅▅▆▇▇██████▁▆▂ (max: 3.764 GB, growth rate:   0%)             
+        /home/mmr.pinto/searchTorcMap.py: % of time = 100.00% (2m:58.782s) out of 2m:58.782s.         
+       ╷       ╷       ╷       ╷        ╷       ╷               ╷       ╷                             
+       │Time   │–––––– │–––––– │Memory  │–––––– │–––––––––––    │Copy   │                             
+  Line │Python │native │system │Python  │peak   │timeline/%     │(MB/s) │/home/mmr.pinto/searchTorc…  
+╺━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━━┿━━━━━━━┿━━━━━━━━━━━━━━━┿━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
+     1 │       │       │       │        │       │               │       │#!/usr/bin/env python3       
+     2 │       │       │       │        │       │               │       │                             
+     3 │       │       │       │  99%   │   10M │▁▁▁▁▁▁▁▁▁   3% │     2 │import torcpy as torc        
+     4 │       │       │       │        │       │               │       │import numpy as np           
+     5 │       │       │       │        │       │               │       │import time                  
+     6 │       │       │       │        │       │               │       │from mpi4py import MPI       
+     7 │       │       │       │        │       │               │       │#import cProfile             
+     8 │       │       │       │        │       │               │       │                             
+     9 │       │       │       │        │       │               │       │                             
+    10 │       │       │       │        │       │               │       │def fun(value):              
+    11 │       │       │       │        │       │               │       │    #time.sleep(0.1)         
+    12 │       │       │       │        │       │               │       │    #return value == 20      
+    13 │       │       │       │        │       │               │       │    start_time = time.time(  
+    14 │       │       │       │        │       │               │       │    total_sum = 0            
+    15 │    9% │       │       │        │       │               │       │    for i in range(1, 10000  
+    16 │   15% │       │       │        │       │               │       │        total_sum += i       
+    17 │       │       │       │        │       │               │       │                             
+    18 │       │       │       │        │       │               │       │        # Check if 100 mill  
+    19 │   51% │       │       │        │       │               │       │        elapsed_time = time  
+    20 │   10% │       │       │        │       │               │       │        if elapsed_time >=   
+    21 │       │       │       │        │       │               │       │            break            
+    22 │       │       │       │        │       │               │       │                             
+    23 │       │       │       │        │       │               │       │    return value == 20       
+    24 │       │       │       │        │       │               │       │                             
+    25 │       │       │       │        │       │               │       │def transform(value):        
+    26 │       │       │       │        │       │               │       │    return value*10 if valu  
+    27 │       │       │       │        │       │               │       │                             
+    28 │       │       │       │        │       │               │       │def broadcast(comm,rank,siz  
+    29 │       │       │       │        │       │               │       │    if rank != 0:            
+    30 │       │       │       │        │       │               │       │        return               
+    31 │       │       │       │        │       │               │       │    i= 1                     
+    32 │       │       │       │        │       │               │       │    while i< size:           
+    33 │       │       │       │        │       │               │       │        comm.Isend(value,de  
+    34 │       │       │       │        │       │               │       │        i += 1               
+    35 │       │       │       │        │       │               │       │                             
+    36 │       │       │       │        │       │               │       │def search_array(arr):       
+    37 │       │       │       │        │       │               │       │    length = len(arr)        
+    38 │       │       │       │        │       │               │       │    checkFunction = fun      
+    39 │       │       │       │        │       │               │       │    transformFunc= transfor  
+    40 │       │       │       │        │       │               │       │    found = False            
+    41 │       │       │       │        │       │               │       │    i = 0                    
+    42 │       │       │       │        │       │               │       │    index = None             
+    43 │       │       │       │        │       │               │       │    originalValue = None     
+    44 │       │       │       │        │       │               │       │    transformedValue = None  
+    45 │       │       │       │        │       │               │       │                             
+    46 │       │       │       │        │       │               │       │    while i < length:        
+    47 │       │       │       │        │       │               │       │        transformedValue =   
+    48 │       │       │       │        │       │               │       │        if checkFunction(tr  
+    49 │       │       │       │        │       │               │       │            found = True     
+    50 │       │       │       │        │       │               │       │            originalValue =  
+    51 │       │       │       │        │       │               │       │            index = i + (to  
+    52 │       │       │       │        │       │               │       │            break            
+    53 │       │       │       │        │       │               │       │        i += 1               
+    54 │       │       │       │        │       │               │       │                             
+    55 │       │       │       │        │       │               │       │    return (found, index, o  
+    56 │       │       │       │        │       │               │       │                             
+    57 │       │       │       │        │       │               │       │def subArray(arr,nodes):     
+    58 │       │       │       │        │       │               │       │    length = len(arr)        
+    59 │       │       │       │        │       │               │       │    chunk_size = (length +   
+    60 │       │       │       │ 100%   │ 1.12G │▁▁▁▁▁▁▁▁▁  19% │       │    sub_arr= [arr[i:i+chunk  
+    61 │       │       │       │ 100%   │  152M │▁▁▁   2%       │       │    sub_arr[-1] += [None] *  
+    62 │       │       │       │        │       │               │       │    return sub_arr           
+    63 │       │       │       │        │       │               │       │                             
+    64 │       │       │       │        │       │               │       │def main():                  
+    65 │       │       │       │        │       │               │       │    arr = [3,3,3,3,3,3,3,3,  
+    66 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    67 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    68 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    69 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    70 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    71 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    72 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    73 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    74 │       │       │       │        │       │               │       │    ,3,3,3,3,3,3,3,3,3,3,3,  
+    75 │       │       │       │        │       │               │       │                             
+    76 │       │       │       │        │       │               │       │                             
+    77 │       │       │       │        │       │               │       │    arr = arr + arr + arr +  
+    78 │       │       │       │        │       │               │       │    arr = arr + arr          
+    79 │       │       │       │        │       │               │       │    arr = arr + arr + arr +  
+    80 │       │       │       │        │       │               │       │    arr = arr + arr          
+    81 │       │       │       │ 100%   │   12M │▁              │       │    arr = arr + arr + arr +  
+    82 │       │       │       │        │       │               │       │    arr = arr + arr          
+    83 │       │       │       │ 100%   │  109M │▁▁▁▁▁▁▁   3%   │       │    arr = arr + arr + arr +  
+    84 │       │       │       │ 100%   │  122M │▁▁   2%        │       │    arr = arr + arr          
+    85 │       │       │       │ 100%   │ 1.01G │▁▁▁▁▁▁▁▁  27%  │       │    arr = arr + arr + arr +  
+    86 │       │       │       │ 100%   │ 1.19G │▁▁  19%        │       │    arr = arr + arr          
+    87 │       │       │       │        │       │               │       │                             
+    88 │       │       │       │        │       │               │       │    size = torc.num_nodes()  
+    89 │       │       │       │        │       │               │       │                             
+    90 │       │       │       │        │       │               │       │    rank = torc.node_id()    
+    91 │       │       │       │        │       │               │       │                             
+    92 │       │       │       │        │       │               │       │    #index = int(len(arr)/2  
+    93 │       │       │       │        │       │               │       │    #subArrayLen = int(len(  
+    94 │       │       │       │        │       │               │       │    #index = int(subArrayLe  
+    95 │       │       │       │        │       │               │       │    #if size == 1:           
+    96 │       │       │       │        │       │               │       │    #    index = 80000000    
+    97 │       │       │       │        │       │               │       │    #print("index array is"  
+    98 │       │       │       │        │       │               │       │    #arr[index] = 2          
+    99 │       │       │       │        │       │               │       │    arr[-1] = 2              
+   100 │       │       │       │        │       │               │       │                             
+   101 │       │       │       │        │       │               │       │    #arr = [4, 2, 7, 1, 9,   
+   102 │       │       │       │        │       │               │       │                             
+   103 │       │       │       │        │       │               │       │                             
+   104 │       │       │       │        │       │               │       │    print(len(arr))          
+   105 │       │       │       │        │       │               │       │    ts = time.time()         
+   106 │       │       │       │        │       │               │       │    sub_arr= subArray(arr,s  
+   107 │       │       │       │ 100%   │ 1.29G │▂▂▂▂▂▂▂▂▂  24% │       │    results = torc.map(sear  
+   108 │       │       │       │        │       │               │       │    for r in results:        
+   109 │       │       │       │        │       │               │       │        if r[0]:             
+   110 │       │       │       │        │       │               │       │            print("Value fo  
+   111 │       │       │       │        │       │               │       │    ts = time.time() - ts    
+   112 │       │       │       │        │       │               │       │    print("ended execution"  
+   113 │       │       │       │        │       │               │       │                             
+   114 │       │       │       │        │       │               │       │                             
+   115 │       │       │       │        │       │               │       │#def torcStart():            
+   116 │       │       │       │        │       │               │       │#    torc.start(main)        
+   117 │       │       │       │        │       │               │       │                             
+   118 │       │       │       │        │       │               │       │if __name__ == "__main__":   
+   119 │       │       │   8%  │        │       │               │       │    torc.start(main)         
+   120 │       │       │       │        │       │               │       │    #rank = MPI.COMM_WORLD.  
+   121 │       │       │       │        │       │               │       │    #cProfile.run('torcStar  
+       │       │       │       │        │       │               │       │                             
+╶──────┼───────┼───────┼───────┼────────┼───────┼───────────────┼───────┼────────────────────────────╴
+       │       │       │       │        │       │               │       │function summary for /home…  
+    10 │   87% │       │       │        │       │               │       │fun                          
+    25 │       │       │       │        │       │               │       │transform                    
+    36 │    2% │       │       │        │       │               │       │search_array                 
+    57 │       │       │       │ 100%   │ 1.12G │█████████  22% │       │subArray                     
+    64 │       │       │       │ 100%   │ 1.29G │█████████  76% │       │main                         
+       ╵       ╵       ╵       ╵        ╵       ╵               ╵       ╵                             
+Top PEAK memory consumption, by line:
+(1)   107:  1323 MB                                                                                    
+(2)    86:  1221 MB                                                                                    
+(3)    60:  1143 MB                                                                                    
+(4)    85:  1037 MB                                                                                    
+(5)    61:   152 MB  

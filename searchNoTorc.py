@@ -4,7 +4,7 @@ from mpi4py import MPI
 import numpy as np
 import time
 from mpi4py import MPI
-import cProfile
+#import cProfile
 
 
 comm = MPI.COMM_WORLD
@@ -160,8 +160,9 @@ def main():
 
 # Test the function
 if __name__ == "__main__":
-    rank = MPI.COMM_WORLD.Get_rank()
-    cProfile.run('main()', 'cprof/searchNoTorc/output{}.pstats'.format(rank))
+    main()
+    #rank = MPI.COMM_WORLD.Get_rank()
+    #cProfile.run('main()', 'cprof/searchNoTorc/output{}.pstats'.format(rank))
     
 
 

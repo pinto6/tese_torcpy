@@ -4,7 +4,7 @@ import torcpy as torc
 import numpy as np
 import time
 from mpi4py import MPI
-import cProfile
+#import cProfile
 
 def fun(value):
     #time.sleep(0.1)
@@ -70,9 +70,11 @@ def searchTest():
     print("TIME",ts)
     return toRet
 
-def torcStart():
-    torc.start(searchTest)
+#def torcStart():
+#    torc.start(searchTest)
         
 if __name__ == "__main__":
-    rank = MPI.COMM_WORLD.Get_rank()
-    cProfile.run('torcStart()', 'cprof/search/output{}.pstats'.format(rank))
+    torc.start(searchTest)
+
+    #rank = MPI.COMM_WORLD.Get_rank()
+    #cProfile.run('torcStart()', 'cprof/search/output{}.pstats'.format(rank))
