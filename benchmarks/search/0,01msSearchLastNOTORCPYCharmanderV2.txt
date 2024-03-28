@@ -1,0 +1,40 @@
+Thread Count: 4
+160000000
+Value found at index: 159999999 with original value 2 and transformed value 20
+ended execution with time 455.05392026901245
+----------------------------------------
+Thread Count: 8
+160000000
+Value found at index: 159999999 with original value 2 and transformed value 20
+ended execution with time 229.0875027179718
+----------------------------------------
+Thread Count: 16
+160000000
+Value found at index: 159999999 with original value 2 and transformed value 20
+ended execution with time 116.0175724029541
+----------------------------------------
+Thread Count: 32
+160000000
+Value found at index: 159999999 with original value 2 and transformed value 20
+ended execution with time 66.67342162132263
+----------------------------------------
+Thread Count: 33
+160000000
+Value found at index: 159999999 with original value 2 and transformed value 20
+ended execution with time 63.60311484336853
+----------------------------------------
+Thread Count: 64
+160000000
+Value found at index: 159999999 with original value 2 and transformed value 20
+ended execution with time 38.857717514038086
+----------------------------------------
+Thread Count: 65
+160000000
+Value found at index: 159999999 with original value 2 and transformed value 20
+ended execution with time 34.44680953025818
+----------------------------------------
+Thread Count: 96
+160000000
+Value found at index: 159999999 with original value 2 and transformed value 20
+ended execution with time 27.396934270858765
+----------------------------------------

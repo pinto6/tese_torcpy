@@ -1,0 +1,520 @@
+Thread Count: 8
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+(10000, 10000)
+to return [[1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ ...
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]]
+TIME 154.46216893196106
+[32mTORCPY: node[0]: created=8, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[5]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+[32mTORCPY: node[7]: created=0, executed=1[0m
+----------------------------------------
+Thread Count: 16
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+(10000, 10000)
+to return [[1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ ...
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]]
+TIME 79.84188842773438
+[32mTORCPY: node[0]: created=16, executed=1[0m
+[32mTORCPY: node[9]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[7]: created=0, executed=1[0m
+[32mTORCPY: node[14]: created=0, executed=1[0m
+[32mTORCPY: node[5]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[11]: created=0, executed=1[0m
+[32mTORCPY: node[15]: created=0, executed=1[0m
+[32mTORCPY: node[10]: created=0, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+[32mTORCPY: node[8]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
+[32mTORCPY: node[12]: created=0, executed=1[0m
+[32mTORCPY: node[13]: created=0, executed=1[0m
+----------------------------------------
+Thread Count: 32
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+(10000, 10000)
+to return [[1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ ...
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]]
+TIME 74.34738874435425
+[32mTORCPY: node[0]: created=32, executed=1[0m
+[32mTORCPY: node[26]: created=0, executed=1[0m
+[32mTORCPY: node[12]: created=0, executed=1[0m
+[32mTORCPY: node[27]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+[32mTORCPY: node[29]: created=0, executed=1[0m
+[32mTORCPY: node[17]: created=0, executed=1[0m
+[32mTORCPY: node[21]: created=0, executed=1[0m
+[32mTORCPY: node[18]: created=0, executed=1[0m
+[32mTORCPY: node[11]: created=0, executed=1[0m
+[32mTORCPY: node[30]: created=0, executed=1[0m
+[32mTORCPY: node[22]: created=0, executed=1[0m
+[32mTORCPY: node[25]: created=0, executed=1[0m
+[32mTORCPY: node[10]: created=0, executed=1[0m
+[32mTORCPY: node[20]: created=0, executed=1[0m
+[32mTORCPY: node[8]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[15]: created=0, executed=1[0m
+[32mTORCPY: node[24]: created=0, executed=1[0m
+[32mTORCPY: node[5]: created=0, executed=1[0m
+[32mTORCPY: node[28]: created=0, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[13]: created=0, executed=1[0m
+[32mTORCPY: node[23]: created=0, executed=1[0m
+[32mTORCPY: node[31]: created=0, executed=1[0m
+[32mTORCPY: node[14]: created=0, executed=1[0m
+[32mTORCPY: node[19]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[7]: created=0, executed=1[0m
+[32mTORCPY: node[9]: created=0, executed=1[0m
+[32mTORCPY: node[16]: created=0, executed=1[0m
+----------------------------------------
+Thread Count: 33
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+(10000, 10000)
+to return [[1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ ...
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]]
+TIME 72.49565649032593
+[32mTORCPY: node[0]: created=33, executed=1[0m
+[32mTORCPY: node[10]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[26]: created=0, executed=1[0m
+[32mTORCPY: node[18]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+[32mTORCPY: node[14]: created=0, executed=1[0m
+[32mTORCPY: node[21]: created=0, executed=1[0m
+[32mTORCPY: node[12]: created=0, executed=1[0m
+[32mTORCPY: node[9]: created=0, executed=1[0m
+[32mTORCPY: node[5]: created=0, executed=1[0m
+[32mTORCPY: node[28]: created=0, executed=1[0m
+[32mTORCPY: node[32]: created=0, executed=1[0m
+[32mTORCPY: node[16]: created=0, executed=1[0m
+[32mTORCPY: node[11]: created=0, executed=1[0m
+[32mTORCPY: node[15]: created=0, executed=1[0m
+[32mTORCPY: node[22]: created=0, executed=1[0m
+[32mTORCPY: node[27]: created=0, executed=1[0m
+[32mTORCPY: node[17]: created=0, executed=1[0m
+[32mTORCPY: node[8]: created=0, executed=1[0m
+[32mTORCPY: node[7]: created=0, executed=1[0m
+[32mTORCPY: node[19]: created=0, executed=1[0m
+[32mTORCPY: node[20]: created=0, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[30]: created=0, executed=1[0m
+[32mTORCPY: node[31]: created=0, executed=1[0m
+[32mTORCPY: node[13]: created=0, executed=1[0m
+[32mTORCPY: node[25]: created=0, executed=1[0m
+[32mTORCPY: node[24]: created=0, executed=1[0m
+[32mTORCPY: node[29]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
+[32mTORCPY: node[23]: created=0, executed=1[0m
+----------------------------------------
+Thread Count: 64
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+(10000, 10000)
+to return [[1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ ...
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]]
+TIME 40.7244930267334
+[32mTORCPY: node[0]: created=64, executed=1[0m
+[32mTORCPY: node[23]: created=0, executed=1[0m
+[32mTORCPY: node[8]: created=0, executed=1[0m
+[32mTORCPY: node[18]: created=0, executed=1[0m
+[32mTORCPY: node[26]: created=0, executed=1[0m
+[32mTORCPY: node[31]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[46]: created=0, executed=1[0m
+[32mTORCPY: node[38]: created=0, executed=1[0m
+[32mTORCPY: node[53]: created=0, executed=1[0m
+[32mTORCPY: node[14]: created=0, executed=1[0m
+[32mTORCPY: node[5]: created=0, executed=1[0m
+[32mTORCPY: node[32]: created=0, executed=1[0m
+[32mTORCPY: node[16]: created=0, executed=1[0m
+[32mTORCPY: node[54]: created=0, executed=1[0m
+[32mTORCPY: node[57]: created=0, executed=1[0m
+[32mTORCPY: node[44]: created=0, executed=1[0m
+[32mTORCPY: node[51]: created=0, executed=1[0m
+[32mTORCPY: node[42]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
+[32mTORCPY: node[24]: created=0, executed=1[0m
+[32mTORCPY: node[48]: created=0, executed=1[0m
+[32mTORCPY: node[7]: created=0, executed=1[0m
+[32mTORCPY: node[52]: created=0, executed=1[0m
+[32mTORCPY: node[15]: created=0, executed=1[0m
+[32mTORCPY: node[22]: created=0, executed=1[0m
+[32mTORCPY: node[40]: created=0, executed=1[0m
+[32mTORCPY: node[20]: created=0, executed=1[0m
+[32mTORCPY: node[59]: created=0, executed=1[0m
+[32mTORCPY: node[34]: created=0, executed=1[0m
+[32mTORCPY: node[19]: created=0, executed=1[0m
+[32mTORCPY: node[25]: created=0, executed=1[0m
+[32mTORCPY: node[17]: created=0, executed=1[0m
+[32mTORCPY: node[28]: created=0, executed=1[0m
+[32mTORCPY: node[21]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+[32mTORCPY: node[27]: created=0, executed=1[0m
+[32mTORCPY: node[35]: created=0, executed=1[0m
+[32mTORCPY: node[36]: created=0, executed=1[0m
+[32mTORCPY: node[29]: created=0, executed=1[0m
+[32mTORCPY: node[12]: created=0, executed=1[0m
+[32mTORCPY: node[58]: created=0, executed=1[0m
+[32mTORCPY: node[60]: created=0, executed=1[0m
+[32mTORCPY: node[33]: created=0, executed=1[0m
+[32mTORCPY: node[41]: created=0, executed=1[0m
+[32mTORCPY: node[30]: created=0, executed=1[0m
+[32mTORCPY: node[37]: created=0, executed=1[0m
+[32mTORCPY: node[13]: created=0, executed=1[0m
+[32mTORCPY: node[61]: created=0, executed=1[0m
+[32mTORCPY: node[56]: created=0, executed=1[0m
+[32mTORCPY: node[9]: created=0, executed=1[0m
+[32mTORCPY: node[63]: created=0, executed=1[0m
+[32mTORCPY: node[10]: created=0, executed=1[0m
+[32mTORCPY: node[50]: created=0, executed=1[0m
+[32mTORCPY: node[55]: created=0, executed=1[0m
+[32mTORCPY: node[45]: created=0, executed=1[0m
+[32mTORCPY: node[47]: created=0, executed=1[0m
+[32mTORCPY: node[49]: created=0, executed=1[0m
+[32mTORCPY: node[62]: created=0, executed=1[0m
+[32mTORCPY: node[11]: created=0, executed=1[0m
+[32mTORCPY: node[39]: created=0, executed=1[0m
+[32mTORCPY: node[43]: created=0, executed=1[0m
+----------------------------------------
+Thread Count: 65
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+(10000, 10000)
+to return [[1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ ...
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]
+ [1. 2. 2. ... 2. 2. 2.]]
+TIME 39.10462164878845
+[32mTORCPY: node[0]: created=65, executed=1[0m
+[32mTORCPY: node[27]: created=0, executed=1[0m
+[32mTORCPY: node[29]: created=0, executed=1[0m
+[32mTORCPY: node[7]: created=0, executed=1[0m
+[32mTORCPY: node[52]: created=0, executed=1[0m
+[32mTORCPY: node[64]: created=0, executed=1[0m
+[32mTORCPY: node[48]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+[32mTORCPY: node[55]: created=0, executed=1[0m
+[32mTORCPY: node[62]: created=0, executed=1[0m
+[32mTORCPY: node[59]: created=0, executed=1[0m
+[32mTORCPY: node[22]: created=0, executed=1[0m
+[32mTORCPY: node[24]: created=0, executed=1[0m
+[32mTORCPY: node[57]: created=0, executed=1[0m
+[32mTORCPY: node[58]: created=0, executed=1[0m
+[32mTORCPY: node[31]: created=0, executed=1[0m
+[32mTORCPY: node[34]: created=0, executed=1[0m
+[32mTORCPY: node[16]: created=0, executed=1[0m
+[32mTORCPY: node[44]: created=0, executed=1[0m
+[32mTORCPY: node[28]: created=0, executed=1[0m
+[32mTORCPY: node[14]: created=0, executed=1[0m
+[32mTORCPY: node[60]: created=0, executed=1[0m
+[32mTORCPY: node[35]: created=0, executed=1[0m
+[32mTORCPY: node[30]: created=0, executed=1[0m
+[32mTORCPY: node[43]: created=0, executed=1[0m
+[32mTORCPY: node[51]: created=0, executed=1[0m
+[32mTORCPY: node[11]: created=0, executed=1[0m
+[32mTORCPY: node[12]: created=0, executed=1[0m
+[32mTORCPY: node[23]: created=0, executed=1[0m
+[32mTORCPY: node[13]: created=0, executed=1[0m
+[32mTORCPY: node[49]: created=0, executed=1[0m
+[32mTORCPY: node[20]: created=0, executed=1[0m
+[32mTORCPY: node[25]: created=0, executed=1[0m
+[32mTORCPY: node[15]: created=0, executed=1[0m
+[32mTORCPY: node[18]: created=0, executed=1[0m
+[32mTORCPY: node[38]: created=0, executed=1[0m
+[32mTORCPY: node[61]: created=0, executed=1[0m
+[32mTORCPY: node[54]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[53]: created=0, executed=1[0m
+[32mTORCPY: node[19]: created=0, executed=1[0m
+[32mTORCPY: node[26]: created=0, executed=1[0m
+[32mTORCPY: node[47]: created=0, executed=1[0m
+[32mTORCPY: node[56]: created=0, executed=1[0m
+[32mTORCPY: node[37]: created=0, executed=1[0m
+[32mTORCPY: node[39]: created=0, executed=1[0m
+[32mTORCPY: node[10]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[63]: created=0, executed=1[0m
+[32mTORCPY: node[46]: created=0, executed=1[0m
+[32mTORCPY: node[21]: created=0, executed=1[0m
+[32mTORCPY: node[36]: created=0, executed=1[0m
+[32mTORCPY: node[5]: created=0, executed=1[0m
+[32mTORCPY: node[50]: created=0, executed=1[0m
+[32mTORCPY: node[8]: created=0, executed=1[0m
+[32mTORCPY: node[42]: created=0, executed=1[0m
+[32mTORCPY: node[40]: created=0, executed=1[0m
+[32mTORCPY: node[33]: created=0, executed=1[0m
+[32mTORCPY: node[32]: created=0, executed=1[0m
+[32mTORCPY: node[45]: created=0, executed=1[0m
+[32mTORCPY: node[41]: created=0, executed=1[0m
+[32mTORCPY: node[17]: created=0, executed=1[0m
+[32mTORCPY: node[9]: created=0, executed=1[0m
+----------------------------------------

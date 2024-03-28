@@ -3,14 +3,9 @@ Thread Count: 1
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
 [32mTORCPY: main starts[0m
-RESULT IS  (0, array([[1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       ...,
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.]]))
-ended execution with time 1159.5043864250183
+160000000
+Value found at index: 159999999 with original value 2 and transformed value 20
+ended execution with time 1671.3856780529022
 [32mTORCPY: node[0]: created=1, executed=1[0m
 ----------------------------------------
 Thread Count: 2
@@ -19,14 +14,9 @@ Thread Count: 2
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
 [32mTORCPY: main starts[0m
-RESULT IS  (0, array([[1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       ...,
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.]]))
-ended execution with time 587.0689907073975
+160000000
+Value found at index: 239999997 with original value 2 and transformed value 20
+ended execution with time 842.4770946502686
 [32mTORCPY: node[0]: created=2, executed=1[0m
 [32mTORCPY: node[1]: created=0, executed=1[0m
 ----------------------------------------
@@ -38,18 +28,13 @@ Thread Count: 4
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
 [32mTORCPY: main starts[0m
-RESULT IS  (0, array([[1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       ...,
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.]]))
-ended execution with time 289.2628564834595
+160000000
+Value found at index: 279999987 with original value 2 and transformed value 20
+ended execution with time 422.59986639022827
 [32mTORCPY: node[0]: created=4, executed=1[0m
 [32mTORCPY: node[1]: created=0, executed=1[0m
-[32mTORCPY: node[3]: created=0, executed=1[0m
 [32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
 ----------------------------------------
 Thread Count: 8
 [34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
@@ -63,22 +48,17 @@ Thread Count: 8
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
 [32mTORCPY: main starts[0m
-RESULT IS  (0, array([[1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       ...,
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.]]))
-ended execution with time 150.38002038002014
+160000000
+Value found at index: 299999943 with original value 2 and transformed value 20
+ended execution with time 213.75534796714783
 [32mTORCPY: node[0]: created=8, executed=1[0m
-[32mTORCPY: node[3]: created=0, executed=1[0m
 [32mTORCPY: node[5]: created=0, executed=1[0m
-[32mTORCPY: node[2]: created=0, executed=1[0m
-[32mTORCPY: node[1]: created=0, executed=1[0m
 [32mTORCPY: node[4]: created=0, executed=1[0m
 [32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
 [32mTORCPY: node[7]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
 ----------------------------------------
 Thread Count: 16
 [34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
@@ -100,30 +80,25 @@ Thread Count: 16
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
 [32mTORCPY: main starts[0m
-RESULT IS  (0, array([[1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       ...,
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.]]))
-ended execution with time 78.38218712806702
+160000000
+Value found at index: 309999759 with original value 2 and transformed value 20
+ended execution with time 108.77098774909973
 [32mTORCPY: node[0]: created=16, executed=1[0m
-[32mTORCPY: node[2]: created=0, executed=1[0m
-[32mTORCPY: node[13]: created=0, executed=1[0m
-[32mTORCPY: node[4]: created=0, executed=1[0m
-[32mTORCPY: node[5]: created=0, executed=1[0m
 [32mTORCPY: node[1]: created=0, executed=1[0m
-[32mTORCPY: node[15]: created=0, executed=1[0m
-[32mTORCPY: node[11]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
 [32mTORCPY: node[7]: created=0, executed=1[0m
-[32mTORCPY: node[8]: created=0, executed=1[0m
+[32mTORCPY: node[15]: created=0, executed=1[0m
+[32mTORCPY: node[5]: created=0, executed=1[0m
+[32mTORCPY: node[12]: created=0, executed=1[0m
+[32mTORCPY: node[11]: created=0, executed=1[0m
 [32mTORCPY: node[3]: created=0, executed=1[0m
 [32mTORCPY: node[10]: created=0, executed=1[0m
-[32mTORCPY: node[12]: created=0, executed=1[0m
-[32mTORCPY: node[6]: created=0, executed=1[0m
-[32mTORCPY: node[9]: created=0, executed=1[0m
 [32mTORCPY: node[14]: created=0, executed=1[0m
+[32mTORCPY: node[9]: created=0, executed=1[0m
+[32mTORCPY: node[8]: created=0, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
+[32mTORCPY: node[13]: created=0, executed=1[0m
 ----------------------------------------
 Thread Count: 32
 [34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
@@ -161,46 +136,41 @@ Thread Count: 32
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
 [32mTORCPY: main starts[0m
-RESULT IS  (0, array([[1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       ...,
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.]]))
-ended execution with time 75.52695059776306
+160000000
+Value found at index: 314999007 with original value 2 and transformed value 20
+ended execution with time 59.237706661224365
 [32mTORCPY: node[0]: created=32, executed=1[0m
-[32mTORCPY: node[6]: created=0, executed=1[0m
-[32mTORCPY: node[5]: created=0, executed=1[0m
+[32mTORCPY: node[14]: created=0, executed=1[0m
+[32mTORCPY: node[20]: created=0, executed=1[0m
+[32mTORCPY: node[9]: created=0, executed=1[0m
+[32mTORCPY: node[22]: created=0, executed=1[0m
 [32mTORCPY: node[16]: created=0, executed=1[0m
+[32mTORCPY: node[17]: created=0, executed=1[0m
+[32mTORCPY: node[27]: created=0, executed=1[0m
+[32mTORCPY: node[18]: created=0, executed=1[0m
+[32mTORCPY: node[24]: created=0, executed=1[0m
+[32mTORCPY: node[23]: created=0, executed=1[0m
+[32mTORCPY: node[21]: created=0, executed=1[0m
+[32mTORCPY: node[29]: created=0, executed=1[0m
+[32mTORCPY: node[26]: created=0, executed=1[0m
+[32mTORCPY: node[30]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
 [32mTORCPY: node[11]: created=0, executed=1[0m
+[32mTORCPY: node[31]: created=0, executed=1[0m
+[32mTORCPY: node[5]: created=0, executed=1[0m
 [32mTORCPY: node[3]: created=0, executed=1[0m
 [32mTORCPY: node[19]: created=0, executed=1[0m
-[32mTORCPY: node[9]: created=0, executed=1[0m
-[32mTORCPY: node[29]: created=0, executed=1[0m
-[32mTORCPY: node[14]: created=0, executed=1[0m
-[32mTORCPY: node[24]: created=0, executed=1[0m
-[32mTORCPY: node[12]: created=0, executed=1[0m
-[32mTORCPY: node[13]: created=0, executed=1[0m
-[32mTORCPY: node[21]: created=0, executed=1[0m
-[32mTORCPY: node[17]: created=0, executed=1[0m
-[32mTORCPY: node[15]: created=0, executed=1[0m
-[32mTORCPY: node[20]: created=0, executed=1[0m
-[32mTORCPY: node[10]: created=0, executed=1[0m
-[32mTORCPY: node[26]: created=0, executed=1[0m
-[32mTORCPY: node[4]: created=0, executed=1[0m
-[32mTORCPY: node[8]: created=0, executed=1[0m
-[32mTORCPY: node[22]: created=0, executed=1[0m
-[32mTORCPY: node[23]: created=0, executed=1[0m
-[32mTORCPY: node[2]: created=0, executed=1[0m
-[32mTORCPY: node[28]: created=0, executed=1[0m
-[32mTORCPY: node[30]: created=0, executed=1[0m
-[32mTORCPY: node[18]: created=0, executed=1[0m
-[32mTORCPY: node[27]: created=0, executed=1[0m
-[32mTORCPY: node[1]: created=0, executed=1[0m
-[32mTORCPY: node[31]: created=0, executed=1[0m
-[32mTORCPY: node[25]: created=0, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
 [32mTORCPY: node[7]: created=0, executed=1[0m
+[32mTORCPY: node[12]: created=0, executed=1[0m
+[32mTORCPY: node[28]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[13]: created=0, executed=1[0m
+[32mTORCPY: node[8]: created=0, executed=1[0m
+[32mTORCPY: node[10]: created=0, executed=1[0m
+[32mTORCPY: node[15]: created=0, executed=1[0m
+[32mTORCPY: node[25]: created=0, executed=1[0m
 ----------------------------------------
 Thread Count: 33
 [34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
@@ -239,47 +209,42 @@ Thread Count: 33
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
 [32mTORCPY: main starts[0m
-RESULT IS  (0, array([[1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       ...,
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.]]))
-ended execution with time 72.3380823135376
+160000000
+Value found at index: 315150303 with original value 2 and transformed value 20
+ended execution with time 57.877193212509155
 [32mTORCPY: node[0]: created=33, executed=1[0m
-[32mTORCPY: node[2]: created=0, executed=1[0m
-[32mTORCPY: node[28]: created=0, executed=1[0m
-[32mTORCPY: node[14]: created=0, executed=1[0m
-[32mTORCPY: node[11]: created=0, executed=1[0m
-[32mTORCPY: node[6]: created=0, executed=1[0m
-[32mTORCPY: node[31]: created=0, executed=1[0m
-[32mTORCPY: node[23]: created=0, executed=1[0m
-[32mTORCPY: node[27]: created=0, executed=1[0m
-[32mTORCPY: node[22]: created=0, executed=1[0m
 [32mTORCPY: node[15]: created=0, executed=1[0m
-[32mTORCPY: node[1]: created=0, executed=1[0m
-[32mTORCPY: node[16]: created=0, executed=1[0m
 [32mTORCPY: node[17]: created=0, executed=1[0m
-[32mTORCPY: node[10]: created=0, executed=1[0m
-[32mTORCPY: node[12]: created=0, executed=1[0m
-[32mTORCPY: node[32]: created=0, executed=1[0m
+[32mTORCPY: node[14]: created=0, executed=1[0m
+[32mTORCPY: node[7]: created=0, executed=1[0m
 [32mTORCPY: node[8]: created=0, executed=1[0m
-[32mTORCPY: node[30]: created=0, executed=1[0m
-[32mTORCPY: node[18]: created=0, executed=1[0m
+[32mTORCPY: node[28]: created=0, executed=1[0m
+[32mTORCPY: node[31]: created=0, executed=1[0m
+[32mTORCPY: node[13]: created=0, executed=1[0m
 [32mTORCPY: node[5]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+[32mTORCPY: node[10]: created=0, executed=1[0m
+[32mTORCPY: node[20]: created=0, executed=1[0m
+[32mTORCPY: node[16]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
 [32mTORCPY: node[25]: created=0, executed=1[0m
 [32mTORCPY: node[29]: created=0, executed=1[0m
-[32mTORCPY: node[3]: created=0, executed=1[0m
-[32mTORCPY: node[20]: created=0, executed=1[0m
 [32mTORCPY: node[26]: created=0, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[27]: created=0, executed=1[0m
 [32mTORCPY: node[9]: created=0, executed=1[0m
-[32mTORCPY: node[7]: created=0, executed=1[0m
-[32mTORCPY: node[4]: created=0, executed=1[0m
-[32mTORCPY: node[13]: created=0, executed=1[0m
-[32mTORCPY: node[19]: created=0, executed=1[0m
+[32mTORCPY: node[12]: created=0, executed=1[0m
 [32mTORCPY: node[24]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[11]: created=0, executed=1[0m
+[32mTORCPY: node[23]: created=0, executed=1[0m
+[32mTORCPY: node[30]: created=0, executed=1[0m
+[32mTORCPY: node[18]: created=0, executed=1[0m
 [32mTORCPY: node[21]: created=0, executed=1[0m
+[32mTORCPY: node[19]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[32]: created=0, executed=1[0m
+[32mTORCPY: node[22]: created=0, executed=1[0m
 ----------------------------------------
 Thread Count: 64
 [34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
@@ -349,78 +314,73 @@ Thread Count: 64
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
 [32mTORCPY: main starts[0m
-RESULT IS  (0, array([[1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       ...,
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.]]))
-ended execution with time 38.88502812385559
+160000000
+Value found at index: 317495967 with original value 2 and transformed value 20
+ended execution with time 36.41119432449341
 [32mTORCPY: node[0]: created=64, executed=1[0m
+[32mTORCPY: node[32]: created=0, executed=1[0m
+[32mTORCPY: node[16]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[14]: created=0, executed=1[0m
+[32mTORCPY: node[51]: created=0, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[50]: created=0, executed=1[0m
+[32mTORCPY: node[15]: created=0, executed=1[0m
+[32mTORCPY: node[52]: created=0, executed=1[0m
+[32mTORCPY: node[55]: created=0, executed=1[0m
+[32mTORCPY: node[38]: created=0, executed=1[0m
+[32mTORCPY: node[9]: created=0, executed=1[0m
+[32mTORCPY: node[34]: created=0, executed=1[0m
+[32mTORCPY: node[60]: created=0, executed=1[0m
+[32mTORCPY: node[28]: created=0, executed=1[0m
+[32mTORCPY: node[63]: created=0, executed=1[0m
+[32mTORCPY: node[5]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+[32mTORCPY: node[57]: created=0, executed=1[0m
+[32mTORCPY: node[45]: created=0, executed=1[0m
+[32mTORCPY: node[49]: created=0, executed=1[0m
+[32mTORCPY: node[33]: created=0, executed=1[0m
+[32mTORCPY: node[48]: created=0, executed=1[0m
+[32mTORCPY: node[41]: created=0, executed=1[0m
+[32mTORCPY: node[27]: created=0, executed=1[0m
+[32mTORCPY: node[31]: created=0, executed=1[0m
+[32mTORCPY: node[58]: created=0, executed=1[0m
+[32mTORCPY: node[56]: created=0, executed=1[0m
+[32mTORCPY: node[35]: created=0, executed=1[0m
+[32mTORCPY: node[23]: created=0, executed=1[0m
 [32mTORCPY: node[12]: created=0, executed=1[0m
 [32mTORCPY: node[53]: created=0, executed=1[0m
-[32mTORCPY: node[27]: created=0, executed=1[0m
-[32mTORCPY: node[32]: created=0, executed=1[0m
-[32mTORCPY: node[30]: created=0, executed=1[0m
-[32mTORCPY: node[25]: created=0, executed=1[0m
-[32mTORCPY: node[13]: created=0, executed=1[0m
-[32mTORCPY: node[52]: created=0, executed=1[0m
-[32mTORCPY: node[10]: created=0, executed=1[0m
-[32mTORCPY: node[45]: created=0, executed=1[0m
-[32mTORCPY: node[29]: created=0, executed=1[0m
-[32mTORCPY: node[7]: created=0, executed=1[0m
 [32mTORCPY: node[11]: created=0, executed=1[0m
-[32mTORCPY: node[43]: created=0, executed=1[0m
-[32mTORCPY: node[60]: created=0, executed=1[0m
-[32mTORCPY: node[9]: created=0, executed=1[0m
-[32mTORCPY: node[4]: created=0, executed=1[0m
-[32mTORCPY: node[41]: created=0, executed=1[0m
-[32mTORCPY: node[6]: created=0, executed=1[0m
-[32mTORCPY: node[22]: created=0, executed=1[0m
-[32mTORCPY: node[51]: created=0, executed=1[0m
-[32mTORCPY: node[61]: created=0, executed=1[0m
-[32mTORCPY: node[48]: created=0, executed=1[0m
-[32mTORCPY: node[15]: created=0, executed=1[0m
-[32mTORCPY: node[23]: created=0, executed=1[0m
-[32mTORCPY: node[1]: created=0, executed=1[0m
-[32mTORCPY: node[19]: created=0, executed=1[0m
-[32mTORCPY: node[2]: created=0, executed=1[0m
-[32mTORCPY: node[42]: created=0, executed=1[0m
+[32mTORCPY: node[20]: created=0, executed=1[0m
 [32mTORCPY: node[18]: created=0, executed=1[0m
+[32mTORCPY: node[30]: created=0, executed=1[0m
+[32mTORCPY: node[19]: created=0, executed=1[0m
+[32mTORCPY: node[39]: created=0, executed=1[0m
+[32mTORCPY: node[26]: created=0, executed=1[0m
+[32mTORCPY: node[25]: created=0, executed=1[0m
+[32mTORCPY: node[29]: created=0, executed=1[0m
+[32mTORCPY: node[36]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[62]: created=0, executed=1[0m
+[32mTORCPY: node[10]: created=0, executed=1[0m
+[32mTORCPY: node[7]: created=0, executed=1[0m
+[32mTORCPY: node[13]: created=0, executed=1[0m
+[32mTORCPY: node[22]: created=0, executed=1[0m
+[32mTORCPY: node[21]: created=0, executed=1[0m
+[32mTORCPY: node[43]: created=0, executed=1[0m
 [32mTORCPY: node[17]: created=0, executed=1[0m
-[32mTORCPY: node[31]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
+[32mTORCPY: node[46]: created=0, executed=1[0m
+[32mTORCPY: node[44]: created=0, executed=1[0m
+[32mTORCPY: node[47]: created=0, executed=1[0m
+[32mTORCPY: node[59]: created=0, executed=1[0m
 [32mTORCPY: node[8]: created=0, executed=1[0m
 [32mTORCPY: node[40]: created=0, executed=1[0m
-[32mTORCPY: node[38]: created=0, executed=1[0m
-[32mTORCPY: node[50]: created=0, executed=1[0m
-[32mTORCPY: node[57]: created=0, executed=1[0m
-[32mTORCPY: node[59]: created=0, executed=1[0m
-[32mTORCPY: node[28]: created=0, executed=1[0m
-[32mTORCPY: node[56]: created=0, executed=1[0m
-[32mTORCPY: node[58]: created=0, executed=1[0m
-[32mTORCPY: node[33]: created=0, executed=1[0m
-[32mTORCPY: node[49]: created=0, executed=1[0m
-[32mTORCPY: node[3]: created=0, executed=1[0m
-[32mTORCPY: node[37]: created=0, executed=1[0m
-[32mTORCPY: node[39]: created=0, executed=1[0m
-[32mTORCPY: node[16]: created=0, executed=1[0m
-[32mTORCPY: node[44]: created=0, executed=1[0m
-[32mTORCPY: node[5]: created=0, executed=1[0m
 [32mTORCPY: node[54]: created=0, executed=1[0m
-[32mTORCPY: node[26]: created=0, executed=1[0m
-[32mTORCPY: node[36]: created=0, executed=1[0m
-[32mTORCPY: node[55]: created=0, executed=1[0m
-[32mTORCPY: node[47]: created=0, executed=1[0m
-[32mTORCPY: node[62]: created=0, executed=1[0m
 [32mTORCPY: node[24]: created=0, executed=1[0m
-[32mTORCPY: node[21]: created=0, executed=1[0m
-[32mTORCPY: node[46]: created=0, executed=1[0m
-[32mTORCPY: node[14]: created=0, executed=1[0m
-[32mTORCPY: node[63]: created=0, executed=1[0m
-[32mTORCPY: node[34]: created=0, executed=1[0m
-[32mTORCPY: node[20]: created=0, executed=1[0m
-[32mTORCPY: node[35]: created=0, executed=1[0m
+[32mTORCPY: node[42]: created=0, executed=1[0m
+[32mTORCPY: node[61]: created=0, executed=1[0m
+[32mTORCPY: node[37]: created=0, executed=1[0m
 ----------------------------------------
 Thread Count: 65
 [34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
@@ -491,79 +451,74 @@ Thread Count: 65
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
 [32mTORCPY: main starts[0m
-RESULT IS  (0, array([[1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       ...,
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.]]))
-ended execution with time 38.42772459983826
+160000000
+Value found at index: 317532095 with original value 2 and transformed value 20
+ended execution with time 35.15596008300781
 [32mTORCPY: node[0]: created=65, executed=1[0m
 [32mTORCPY: node[16]: created=0, executed=1[0m
-[32mTORCPY: node[27]: created=0, executed=1[0m
-[32mTORCPY: node[43]: created=0, executed=1[0m
-[32mTORCPY: node[58]: created=0, executed=1[0m
-[32mTORCPY: node[55]: created=0, executed=1[0m
-[32mTORCPY: node[28]: created=0, executed=1[0m
-[32mTORCPY: node[59]: created=0, executed=1[0m
-[32mTORCPY: node[50]: created=0, executed=1[0m
-[32mTORCPY: node[60]: created=0, executed=1[0m
-[32mTORCPY: node[20]: created=0, executed=1[0m
-[32mTORCPY: node[21]: created=0, executed=1[0m
-[32mTORCPY: node[39]: created=0, executed=1[0m
-[32mTORCPY: node[5]: created=0, executed=1[0m
-[32mTORCPY: node[53]: created=0, executed=1[0m
-[32mTORCPY: node[32]: created=0, executed=1[0m
-[32mTORCPY: node[2]: created=0, executed=1[0m
-[32mTORCPY: node[47]: created=0, executed=1[0m
-[32mTORCPY: node[42]: created=0, executed=1[0m
-[32mTORCPY: node[14]: created=0, executed=1[0m
-[32mTORCPY: node[33]: created=0, executed=1[0m
-[32mTORCPY: node[51]: created=0, executed=1[0m
-[32mTORCPY: node[57]: created=0, executed=1[0m
-[32mTORCPY: node[17]: created=0, executed=1[0m
-[32mTORCPY: node[44]: created=0, executed=1[0m
-[32mTORCPY: node[4]: created=0, executed=1[0m
 [32mTORCPY: node[52]: created=0, executed=1[0m
-[32mTORCPY: node[34]: created=0, executed=1[0m
-[32mTORCPY: node[18]: created=0, executed=1[0m
-[32mTORCPY: node[12]: created=0, executed=1[0m
-[32mTORCPY: node[40]: created=0, executed=1[0m
-[32mTORCPY: node[22]: created=0, executed=1[0m
-[32mTORCPY: node[30]: created=0, executed=1[0m
-[32mTORCPY: node[8]: created=0, executed=1[0m
-[32mTORCPY: node[45]: created=0, executed=1[0m
-[32mTORCPY: node[1]: created=0, executed=1[0m
-[32mTORCPY: node[62]: created=0, executed=1[0m
-[32mTORCPY: node[26]: created=0, executed=1[0m
-[32mTORCPY: node[46]: created=0, executed=1[0m
-[32mTORCPY: node[6]: created=0, executed=1[0m
-[32mTORCPY: node[64]: created=0, executed=1[0m
-[32mTORCPY: node[37]: created=0, executed=1[0m
-[32mTORCPY: node[25]: created=0, executed=1[0m
-[32mTORCPY: node[29]: created=0, executed=1[0m
-[32mTORCPY: node[49]: created=0, executed=1[0m
-[32mTORCPY: node[63]: created=0, executed=1[0m
-[32mTORCPY: node[48]: created=0, executed=1[0m
-[32mTORCPY: node[19]: created=0, executed=1[0m
-[32mTORCPY: node[15]: created=0, executed=1[0m
-[32mTORCPY: node[23]: created=0, executed=1[0m
-[32mTORCPY: node[35]: created=0, executed=1[0m
-[32mTORCPY: node[11]: created=0, executed=1[0m
-[32mTORCPY: node[41]: created=0, executed=1[0m
-[32mTORCPY: node[31]: created=0, executed=1[0m
-[32mTORCPY: node[10]: created=0, executed=1[0m
-[32mTORCPY: node[61]: created=0, executed=1[0m
-[32mTORCPY: node[54]: created=0, executed=1[0m
-[32mTORCPY: node[38]: created=0, executed=1[0m
-[32mTORCPY: node[9]: created=0, executed=1[0m
-[32mTORCPY: node[24]: created=0, executed=1[0m
-[32mTORCPY: node[3]: created=0, executed=1[0m
-[32mTORCPY: node[13]: created=0, executed=1[0m
-[32mTORCPY: node[7]: created=0, executed=1[0m
-[32mTORCPY: node[36]: created=0, executed=1[0m
 [32mTORCPY: node[56]: created=0, executed=1[0m
+[32mTORCPY: node[29]: created=0, executed=1[0m
+[32mTORCPY: node[32]: created=0, executed=1[0m
+[32mTORCPY: node[49]: created=0, executed=1[0m
+[32mTORCPY: node[39]: created=0, executed=1[0m
+[32mTORCPY: node[53]: created=0, executed=1[0m
+[32mTORCPY: node[45]: created=0, executed=1[0m
+[32mTORCPY: node[63]: created=0, executed=1[0m
+[32mTORCPY: node[5]: created=0, executed=1[0m
+[32mTORCPY: node[58]: created=0, executed=1[0m
+[32mTORCPY: node[35]: created=0, executed=1[0m
+[32mTORCPY: node[27]: created=0, executed=1[0m
+[32mTORCPY: node[19]: created=0, executed=1[0m
+[32mTORCPY: node[33]: created=0, executed=1[0m
+[32mTORCPY: node[17]: created=0, executed=1[0m
+[32mTORCPY: node[43]: created=0, executed=1[0m
+[32mTORCPY: node[24]: created=0, executed=1[0m
+[32mTORCPY: node[50]: created=0, executed=1[0m
+[32mTORCPY: node[34]: created=0, executed=1[0m
+[32mTORCPY: node[10]: created=0, executed=1[0m
+[32mTORCPY: node[26]: created=0, executed=1[0m
+[32mTORCPY: node[7]: created=0, executed=1[0m
+[32mTORCPY: node[28]: created=0, executed=1[0m
+[32mTORCPY: node[25]: created=0, executed=1[0m
+[32mTORCPY: node[61]: created=0, executed=1[0m
+[32mTORCPY: node[13]: created=0, executed=1[0m
+[32mTORCPY: node[64]: created=0, executed=1[0m
+[32mTORCPY: node[8]: created=0, executed=1[0m
+[32mTORCPY: node[9]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+[32mTORCPY: node[31]: created=0, executed=1[0m
+[32mTORCPY: node[42]: created=0, executed=1[0m
+[32mTORCPY: node[41]: created=0, executed=1[0m
+[32mTORCPY: node[46]: created=0, executed=1[0m
+[32mTORCPY: node[15]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[59]: created=0, executed=1[0m
+[32mTORCPY: node[30]: created=0, executed=1[0m
+[32mTORCPY: node[51]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[20]: created=0, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[48]: created=0, executed=1[0m
+[32mTORCPY: node[40]: created=0, executed=1[0m
+[32mTORCPY: node[60]: created=0, executed=1[0m
+[32mTORCPY: node[11]: created=0, executed=1[0m
+[32mTORCPY: node[21]: created=0, executed=1[0m
+[32mTORCPY: node[12]: created=0, executed=1[0m
+[32mTORCPY: node[14]: created=0, executed=1[0m
+[32mTORCPY: node[47]: created=0, executed=1[0m
+[32mTORCPY: node[36]: created=0, executed=1[0m
+[32mTORCPY: node[22]: created=0, executed=1[0m
+[32mTORCPY: node[37]: created=0, executed=1[0m
+[32mTORCPY: node[38]: created=0, executed=1[0m
+[32mTORCPY: node[57]: created=0, executed=1[0m
+[32mTORCPY: node[54]: created=0, executed=1[0m
+[32mTORCPY: node[44]: created=0, executed=1[0m
+[32mTORCPY: node[62]: created=0, executed=1[0m
+[32mTORCPY: node[55]: created=0, executed=1[0m
+[32mTORCPY: node[18]: created=0, executed=1[0m
+[32mTORCPY: node[23]: created=0, executed=1[0m
 ----------------------------------------
 Thread Count: 96
 [34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
@@ -665,108 +620,103 @@ Thread Count: 96
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
 [34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
 [32mTORCPY: main starts[0m
-RESULT IS  (0, array([[1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       ...,
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.],
-       [1., 2., 2., ..., 2., 2., 2.]]))
-ended execution with time 28.781089782714844
+160000000
+Value found at index: 318321204 with original value 2 and transformed value 20
+ended execution with time 27.32549524307251
 [32mTORCPY: node[0]: created=96, executed=1[0m
-[32mTORCPY: node[5]: created=0, executed=1[0m
-[32mTORCPY: node[50]: created=0, executed=1[0m
-[32mTORCPY: node[39]: created=0, executed=1[0m
-[32mTORCPY: node[19]: created=0, executed=1[0m
-[32mTORCPY: node[52]: created=0, executed=1[0m
-[32mTORCPY: node[14]: created=0, executed=1[0m
-[32mTORCPY: node[32]: created=0, executed=1[0m
-[32mTORCPY: node[37]: created=0, executed=1[0m
-[32mTORCPY: node[60]: created=0, executed=1[0m
-[32mTORCPY: node[15]: created=0, executed=1[0m
-[32mTORCPY: node[47]: created=0, executed=1[0m
-[32mTORCPY: node[34]: created=0, executed=1[0m
-[32mTORCPY: node[85]: created=0, executed=1[0m
-[32mTORCPY: node[38]: created=0, executed=1[0m
-[32mTORCPY: node[91]: created=0, executed=1[0m
-[32mTORCPY: node[70]: created=0, executed=1[0m
-[32mTORCPY: node[86]: created=0, executed=1[0m
-[32mTORCPY: node[2]: created=0, executed=1[0m
-[32mTORCPY: node[83]: created=0, executed=1[0m
-[32mTORCPY: node[67]: created=0, executed=1[0m
-[32mTORCPY: node[23]: created=0, executed=1[0m
-[32mTORCPY: node[29]: created=0, executed=1[0m
-[32mTORCPY: node[63]: created=0, executed=1[0m
-[32mTORCPY: node[88]: created=0, executed=1[0m
-[32mTORCPY: node[45]: created=0, executed=1[0m
-[32mTORCPY: node[42]: created=0, executed=1[0m
 [32mTORCPY: node[20]: created=0, executed=1[0m
-[32mTORCPY: node[49]: created=0, executed=1[0m
-[32mTORCPY: node[81]: created=0, executed=1[0m
-[32mTORCPY: node[21]: created=0, executed=1[0m
-[32mTORCPY: node[57]: created=0, executed=1[0m
-[32mTORCPY: node[90]: created=0, executed=1[0m
-[32mTORCPY: node[62]: created=0, executed=1[0m
-[32mTORCPY: node[3]: created=0, executed=1[0m
-[32mTORCPY: node[9]: created=0, executed=1[0m
-[32mTORCPY: node[92]: created=0, executed=1[0m
-[32mTORCPY: node[93]: created=0, executed=1[0m
-[32mTORCPY: node[40]: created=0, executed=1[0m
-[32mTORCPY: node[68]: created=0, executed=1[0m
-[32mTORCPY: node[1]: created=0, executed=1[0m
-[32mTORCPY: node[79]: created=0, executed=1[0m
-[32mTORCPY: node[61]: created=0, executed=1[0m
-[32mTORCPY: node[22]: created=0, executed=1[0m
-[32mTORCPY: node[80]: created=0, executed=1[0m
-[32mTORCPY: node[64]: created=0, executed=1[0m
-[32mTORCPY: node[71]: created=0, executed=1[0m
-[32mTORCPY: node[12]: created=0, executed=1[0m
-[32mTORCPY: node[35]: created=0, executed=1[0m
-[32mTORCPY: node[43]: created=0, executed=1[0m
-[32mTORCPY: node[69]: created=0, executed=1[0m
-[32mTORCPY: node[16]: created=0, executed=1[0m
-[32mTORCPY: node[6]: created=0, executed=1[0m
-[32mTORCPY: node[78]: created=0, executed=1[0m
-[32mTORCPY: node[76]: created=0, executed=1[0m
-[32mTORCPY: node[73]: created=0, executed=1[0m
-[32mTORCPY: node[95]: created=0, executed=1[0m
-[32mTORCPY: node[84]: created=0, executed=1[0m
-[32mTORCPY: node[28]: created=0, executed=1[0m
-[32mTORCPY: node[27]: created=0, executed=1[0m
-[32mTORCPY: node[24]: created=0, executed=1[0m
-[32mTORCPY: node[54]: created=0, executed=1[0m
-[32mTORCPY: node[33]: created=0, executed=1[0m
-[32mTORCPY: node[4]: created=0, executed=1[0m
 [32mTORCPY: node[11]: created=0, executed=1[0m
-[32mTORCPY: node[58]: created=0, executed=1[0m
-[32mTORCPY: node[25]: created=0, executed=1[0m
-[32mTORCPY: node[46]: created=0, executed=1[0m
-[32mTORCPY: node[94]: created=0, executed=1[0m
-[32mTORCPY: node[13]: created=0, executed=1[0m
-[32mTORCPY: node[26]: created=0, executed=1[0m
-[32mTORCPY: node[59]: created=0, executed=1[0m
-[32mTORCPY: node[89]: created=0, executed=1[0m
-[32mTORCPY: node[53]: created=0, executed=1[0m
-[32mTORCPY: node[36]: created=0, executed=1[0m
-[32mTORCPY: node[72]: created=0, executed=1[0m
-[32mTORCPY: node[8]: created=0, executed=1[0m
-[32mTORCPY: node[44]: created=0, executed=1[0m
-[32mTORCPY: node[18]: created=0, executed=1[0m
-[32mTORCPY: node[30]: created=0, executed=1[0m
-[32mTORCPY: node[31]: created=0, executed=1[0m
-[32mTORCPY: node[41]: created=0, executed=1[0m
-[32mTORCPY: node[75]: created=0, executed=1[0m
-[32mTORCPY: node[51]: created=0, executed=1[0m
-[32mTORCPY: node[74]: created=0, executed=1[0m
+[32mTORCPY: node[38]: created=0, executed=1[0m
+[32mTORCPY: node[69]: created=0, executed=1[0m
 [32mTORCPY: node[56]: created=0, executed=1[0m
-[32mTORCPY: node[7]: created=0, executed=1[0m
-[32mTORCPY: node[77]: created=0, executed=1[0m
+[32mTORCPY: node[80]: created=0, executed=1[0m
+[32mTORCPY: node[14]: created=0, executed=1[0m
+[32mTORCPY: node[47]: created=0, executed=1[0m
+[32mTORCPY: node[24]: created=0, executed=1[0m
+[32mTORCPY: node[72]: created=0, executed=1[0m
+[32mTORCPY: node[23]: created=0, executed=1[0m
 [32mTORCPY: node[17]: created=0, executed=1[0m
+[32mTORCPY: node[9]: created=0, executed=1[0m
+[32mTORCPY: node[74]: created=0, executed=1[0m
+[32mTORCPY: node[25]: created=0, executed=1[0m
+[32mTORCPY: node[75]: created=0, executed=1[0m
+[32mTORCPY: node[58]: created=0, executed=1[0m
+[32mTORCPY: node[86]: created=0, executed=1[0m
+[32mTORCPY: node[89]: created=0, executed=1[0m
+[32mTORCPY: node[49]: created=0, executed=1[0m
+[32mTORCPY: node[42]: created=0, executed=1[0m
+[32mTORCPY: node[28]: created=0, executed=1[0m
+[32mTORCPY: node[94]: created=0, executed=1[0m
+[32mTORCPY: node[44]: created=0, executed=1[0m
 [32mTORCPY: node[55]: created=0, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[90]: created=0, executed=1[0m
+[32mTORCPY: node[5]: created=0, executed=1[0m
+[32mTORCPY: node[27]: created=0, executed=1[0m
+[32mTORCPY: node[91]: created=0, executed=1[0m
+[32mTORCPY: node[59]: created=0, executed=1[0m
+[32mTORCPY: node[88]: created=0, executed=1[0m
+[32mTORCPY: node[77]: created=0, executed=1[0m
+[32mTORCPY: node[30]: created=0, executed=1[0m
+[32mTORCPY: node[35]: created=0, executed=1[0m
+[32mTORCPY: node[32]: created=0, executed=1[0m
+[32mTORCPY: node[51]: created=0, executed=1[0m
+[32mTORCPY: node[39]: created=0, executed=1[0m
 [32mTORCPY: node[65]: created=0, executed=1[0m
-[32mTORCPY: node[48]: created=0, executed=1[0m
-[32mTORCPY: node[82]: created=0, executed=1[0m
-[32mTORCPY: node[66]: created=0, executed=1[0m
+[32mTORCPY: node[16]: created=0, executed=1[0m
+[32mTORCPY: node[85]: created=0, executed=1[0m
+[32mTORCPY: node[67]: created=0, executed=1[0m
+[32mTORCPY: node[84]: created=0, executed=1[0m
+[32mTORCPY: node[33]: created=0, executed=1[0m
+[32mTORCPY: node[19]: created=0, executed=1[0m
+[32mTORCPY: node[34]: created=0, executed=1[0m
+[32mTORCPY: node[63]: created=0, executed=1[0m
+[32mTORCPY: node[45]: created=0, executed=1[0m
+[32mTORCPY: node[71]: created=0, executed=1[0m
+[32mTORCPY: node[36]: created=0, executed=1[0m
+[32mTORCPY: node[95]: created=0, executed=1[0m
+[32mTORCPY: node[41]: created=0, executed=1[0m
+[32mTORCPY: node[18]: created=0, executed=1[0m
+[32mTORCPY: node[64]: created=0, executed=1[0m
+[32mTORCPY: node[57]: created=0, executed=1[0m
+[32mTORCPY: node[29]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[73]: created=0, executed=1[0m
+[32mTORCPY: node[93]: created=0, executed=1[0m
+[32mTORCPY: node[13]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[15]: created=0, executed=1[0m
 [32mTORCPY: node[87]: created=0, executed=1[0m
+[32mTORCPY: node[82]: created=0, executed=1[0m
+[32mTORCPY: node[70]: created=0, executed=1[0m
 [32mTORCPY: node[10]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
+[32mTORCPY: node[7]: created=0, executed=1[0m
+[32mTORCPY: node[52]: created=0, executed=1[0m
+[32mTORCPY: node[26]: created=0, executed=1[0m
+[32mTORCPY: node[83]: created=0, executed=1[0m
+[32mTORCPY: node[61]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+[32mTORCPY: node[79]: created=0, executed=1[0m
+[32mTORCPY: node[21]: created=0, executed=1[0m
+[32mTORCPY: node[53]: created=0, executed=1[0m
+[32mTORCPY: node[62]: created=0, executed=1[0m
+[32mTORCPY: node[78]: created=0, executed=1[0m
+[32mTORCPY: node[50]: created=0, executed=1[0m
+[32mTORCPY: node[66]: created=0, executed=1[0m
+[32mTORCPY: node[37]: created=0, executed=1[0m
+[32mTORCPY: node[92]: created=0, executed=1[0m
+[32mTORCPY: node[46]: created=0, executed=1[0m
+[32mTORCPY: node[81]: created=0, executed=1[0m
+[32mTORCPY: node[43]: created=0, executed=1[0m
+[32mTORCPY: node[31]: created=0, executed=1[0m
+[32mTORCPY: node[12]: created=0, executed=1[0m
+[32mTORCPY: node[22]: created=0, executed=1[0m
+[32mTORCPY: node[68]: created=0, executed=1[0m
+[32mTORCPY: node[40]: created=0, executed=1[0m
+[32mTORCPY: node[76]: created=0, executed=1[0m
+[32mTORCPY: node[48]: created=0, executed=1[0m
+[32mTORCPY: node[54]: created=0, executed=1[0m
+[32mTORCPY: node[60]: created=0, executed=1[0m
+[32mTORCPY: node[8]: created=0, executed=1[0m
 ----------------------------------------
