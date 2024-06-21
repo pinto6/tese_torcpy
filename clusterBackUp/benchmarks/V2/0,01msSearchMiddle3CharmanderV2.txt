@@ -1,0 +1,44 @@
+Thread Count: 1
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+index array is 80000000
+160000000
+Value found at index: 80000000 with original value 2 and transformed value 20
+to return (True, 80000000, 2, 20)
+TIME 916.5313565731049
+[32mTORCPY: node[0]: created=1, executed=1[0m
+----------------------------------------
+Thread Count: 2
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+index array is 120000000
+160000000
+Value found at index: 120000000 with original value 2 and transformed value 20
+to return (True, 120000000, 2, 20)
+TIME 502.93945813179016
+[32mTORCPY: node[0]: created=2, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+----------------------------------------
+Thread Count: 4
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+index array is 100000000
+160000000
+Value found at index: 100000000 with original value 2 and transformed value 20
+to return (True, 100000000, 2, 20)
+TIME 272.01527166366577
+[32mTORCPY: node[0]: created=4, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+----------------------------------------

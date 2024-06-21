@@ -10,13 +10,13 @@ fi
 OUTPUT_FILE="$1"
 
 # Define the command template
-CMD="mpirun --hostfile \$OAR_NODEFILE -n NUMBERTHREADS --mca btl_tcp_if_include bond0 searchFinalTorc.py"
+CMD="mpirun --hostfile \$OAR_NODEFILE -n NUMBERTHREADS --mca btl_tcp_if_include bond0 searchTorcMap.py"
 
 # Specify the range of thread counts you want to test
-THREAD_COUNTS=(8 16 32 33 64 65 96)
+THREAD_COUNTS=(16 32 33 64 65 96)
 
 # Output file to save results
-OUTPUT_FILE="benchmarks/$1"
+OUTPUT_FILE="benchmarks/V2/$1"
 
 # Clear previous results
 echo -n "" > "$OUTPUT_FILE"

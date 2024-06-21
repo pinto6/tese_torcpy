@@ -1,0 +1,62 @@
+Thread Count: 1
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+160000000
+Value found at index: 0 with original value 2 and transformed value 20
+ended execution with time 4.012511253356934
+[32mTORCPY: node[0]: created=1, executed=1[0m
+----------------------------------------
+Thread Count: 2
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+160000000
+Value found at index: 0 with original value 2 and transformed value 20
+ended execution with time 1674.399513721466
+[32mTORCPY: node[0]: created=2, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+----------------------------------------
+Thread Count: 4
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+160000000
+Value found at index: 0 with original value 2 and transformed value 20
+ended execution with time 840.0672924518585
+[32mTORCPY: node[0]: created=4, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+----------------------------------------
+Thread Count: 8
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mDEBUG][0m  [32mmpi4py module was succesfully imported[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mMPI.Query_thread returns 3[0m
+[34m[torcpy.runtime[0m [1;30mWARNING][0m  [33mInfo: MPI.Query_thread returns MPI.THREAD_MULTIPLE[0m
+[32mTORCPY: main starts[0m
+160000000
+Value found at index: 0 with original value 2 and transformed value 20
+ended execution with time 422.4022696018219
+[32mTORCPY: node[0]: created=8, executed=1[0m
+[32mTORCPY: node[3]: created=0, executed=1[0m
+[32mTORCPY: node[4]: created=0, executed=1[0m
+[32mTORCPY: node[1]: created=0, executed=1[0m
+[32mTORCPY: node[7]: created=0, executed=1[0m
+[32mTORCPY: node[6]: created=0, executed=1[0m
+[32mTORCPY: node[2]: created=0, executed=1[0m
+[32mTORCPY: node[5]: created=0, executed=1[0m
+----------------------------------------

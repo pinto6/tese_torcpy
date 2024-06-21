@@ -1,0 +1,22 @@
+Thread Count: 1
+index array is 80000000
+160000000
+Value found at index: 80000000 with original value 2 and transformed value 20
+ended execution with time 912.8602414131165
+----------------------------------------
+Thread Count: 2
+index array is 120000000
+160000000
+index array is 120000000
+Value found at index: 120000000 with original value 2 and transformed value 20
+ended execution with time 458.91870522499084
+----------------------------------------
+Thread Count: 4
+index array is 100000000
+160000000
+index array is 100000000
+index array is 100000000
+index array is 100000000
+Value found at index: 100000000 with original value 2 and transformed value 20
+ended execution with time 232.33247137069702
+----------------------------------------
