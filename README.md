@@ -6,7 +6,7 @@ StrictHostKeyChecking no
 
 
 # READ ME
-TorcPy is on torc_py/torcpy
+TorcPy is on torc_py/torcpy (it is where I added my patterns to extend the library [torcpy](https://github.com/pinto6/tese_torcpy/tree/main/torc_py/torcpy))
 
 benchmark.sh is a script to run in the cluster.
 
