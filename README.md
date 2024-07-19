@@ -1,3 +1,6 @@
+# Introduction
+This is the repository where I have tried to implement the new programming patterns in the torc py library for my research.
+
 # Command
 mpirun --hostfile $OAR_NODEFILE -n 16 --mca btl_tcp_if_include bond0 tests.py
 
